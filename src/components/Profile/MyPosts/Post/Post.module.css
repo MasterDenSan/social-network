@@ -1,0 +1,12 @@
+.item {
+    background: chocolate;
+    width: 50%;
+    border: 1px solid royalblue;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.item img {
+    width: 50px;
+    border-radius: 50%;
+}

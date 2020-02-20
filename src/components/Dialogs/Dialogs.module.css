@@ -1,0 +1,28 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.dialogs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-right:2px solid grey;
+}
+
+.dialogs__user {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    margin: 5px;   
+}
+
+.active {
+    color: gold;
+}
+
+.massage {
+    padding: 10px 50px;
+}
