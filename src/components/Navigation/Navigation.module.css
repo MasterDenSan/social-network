@@ -1,16 +1,17 @@
 .nav {
     grid-area: nav;
     background-color: rgb(9, 139, 9);
-  }
-  .nav__item {
+}
+
+.nav__item {
     display: block;
     text-align: center;
     padding: 0 20px;
     text-decoration: none;
     color: #fff;
     font-size: 25px;
-  }
+}
 
-  .activeLink {
+.activeLink {
     color: sandybrown;
-  }
+}

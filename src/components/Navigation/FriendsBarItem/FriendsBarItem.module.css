@@ -1,0 +1,13 @@
+.item {
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.item2 {
+    width: 33.33333%;
+}
+.img {
+    width: 100px;
+}

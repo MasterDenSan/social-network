@@ -1,13 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="" />
+    <list default="true" id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navigation/FriendsBar/FriendsBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navigation/FriendsBar/FriendsBar.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navigation/FriendsBarItem/FriendsBarItem.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navigation/FriendsBarItem/FriendsBarItem.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/redux/dialogs-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/redux/navigation-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/redux/profile-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/redux/redux-store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsItem/DialogsItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsItem/DialogsItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Y5T0St7MYWG3Ha4hv0T0DhVkA4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -16,17 +51,42 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Dialogs/Massage" />
+    <property name="js.last.introduce.type" value="CONST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Dialogs" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\project\new-project1\first-project\src\components\Dialogs\Massage" />
+      <recent name="E:\project\new-project1\first-project\src\components\Dialogs" />
+      <recent name="E:\project\new-project1\first-project\src\components\Profile\MyPosts" />
+      <recent name="E:\project\new-project1\first-project\src\components\redux" />
       <recent name="E:\project\new-project1\first-project\src\components\Dialogs\DialogsItem" />
+      <recent name="E:\project\new-project1\first-project\src\components\Navigation" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\new-project1\first-project\src\components\Navigation" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -40,6 +100,31 @@
       <updated>1582231231656</updated>
       <workItem from="1582231234507" duration="549000" />
       <workItem from="1582231802248" duration="2735000" />
+      <workItem from="1582237643499" duration="19000" />
+      <workItem from="1582271953209" duration="163000" />
+      <workItem from="1582278730391" duration="1134000" />
+      <workItem from="1582281859847" duration="723000" />
+      <workItem from="1582283751628" duration="4085000" />
+      <workItem from="1582292317412" duration="1302000" />
+      <workItem from="1582301330111" duration="1790000" />
+      <workItem from="1582374976498" duration="344000" />
+      <workItem from="1582469342674" duration="3347000" />
+      <workItem from="1582472704336" duration="9448000" />
+      <workItem from="1582489328667" duration="6138000" />
+      <workItem from="1582567083050" duration="2894000" />
+      <workItem from="1582661423395" duration="7825000" />
+      <workItem from="1582743514045" duration="6854000" />
+      <workItem from="1582754063358" duration="2273000" />
+      <workItem from="1582767356824" duration="1914000" />
+      <workItem from="1582771640035" duration="4000" />
+      <workItem from="1582800787365" duration="2708000" />
+      <workItem from="1582877100149" duration="1194000" />
+      <workItem from="1582916917759" duration="6314000" />
+      <workItem from="1582931151724" duration="1040000" />
+      <workItem from="1582935401168" duration="4678000" />
+      <workItem from="1583038648702" duration="29000" />
+      <workItem from="1583120161892" duration="1678000" />
+      <workItem from="1583127479438" duration="6276000" />
     </task>
     <servers />
   </component>
@@ -47,17 +132,45 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="522" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582232835124">
+    <state x="522" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582757451450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="522" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582232835124" />
-    <state x="491" y="255" key="SettingsEditor" timestamp="1582232212764">
+    <state x="522" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582757451450" />
+    <state x="598" y="117" key="CommitChangelistDialog2" timestamp="1582285811799">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="491" y="255" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582232212764" />
+    <state x="598" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582285811799" />
+    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1582285823822">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582285823822" />
+    <state width="1899" height="266" key="GridCell.Tab.0.bottom" timestamp="1583136342331">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583136342331" />
+    <state width="1899" height="266" key="GridCell.Tab.0.center" timestamp="1583136342331">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="266" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583136342331" />
+    <state width="1899" height="266" key="GridCell.Tab.0.left" timestamp="1583136342330">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="266" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583136342330" />
+    <state width="1899" height="266" key="GridCell.Tab.0.right" timestamp="1583136342331">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583136342331" />
+    <state x="491" y="255" key="SettingsEditor" timestamp="1583038674872">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="491" y="255" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583038674872" />
     <state x="644" y="287" key="run.anything.popup" timestamp="1582231862824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="644" y="287" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582231862824" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582745916876">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582745916876" />
   </component>
 </project>
