@@ -13,7 +13,7 @@ const Navigation = (props) => {
                 <NavLink className={s.nav__item} to='/music' activeClassName={s.activeLink}>Music</NavLink>
                 <NavLink className={s.nav__item} to='/settings' activeClassName={s.activeLink}>Settings</NavLink>
             </nav>
-            <FriendsBar friends={props.navigation.friends} />
+            {/*<FriendsBar friends={props.navigation.friends} />*/}
         </div>
     );
 }
