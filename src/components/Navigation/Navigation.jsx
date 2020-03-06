@@ -9,11 +9,12 @@ const Navigation = (props) => {
             <nav className={s.nav}>
                 <NavLink className={s.nav__item} to='/profile' activeClassName={s.activeLink}>Profile</NavLink>
                 <NavLink className={s.nav__item} to='/dialogs' activeClassName={s.activeLink}>Dialogs</NavLink>
+                <NavLink className={s.nav__item} to='/users' activeClassName={s.activeLink}>Users</NavLink>
                 <NavLink className={s.nav__item} to='/news' activeClassName={s.activeLink}>News</NavLink>
                 <NavLink className={s.nav__item} to='/music' activeClassName={s.activeLink}>Music</NavLink>
                 <NavLink className={s.nav__item} to='/settings' activeClassName={s.activeLink}>Settings</NavLink>
             </nav>
-            <FriendsBar friends={props.navigation.friends} />
+            <FriendsBar friends={props.navigation.friends}/>
         </div>
     );
 }
