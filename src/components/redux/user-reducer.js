@@ -2,36 +2,7 @@ const FOLLOW = "FOLLOW";
 const UNFOLLOW = "UNFOLLOW";
 const SETUSERS = "SETUSERS";
 
-let initialState = {
-    users: [
-        {
-            id: 1,
-            name: "Dima",
-            followed: false,
-            status: "I'am King",
-            country: "Russia",
-            city: "Moscow",
-            imgUrl: "https://i.pinimg.com/474x/d7/93/f7/d793f74bd7c7ce93405f3b221897e717.jpg"
-        },
-        {
-            id: 2,
-            name: "Sasha",
-            followed: true,
-            status: "I'am Kinggggggg",
-            country: "Russia",
-            city: "Moscow",
-            imgUrl: "https://i.pinimg.com/474x/d7/93/f7/d793f74bd7c7ce93405f3b221897e717.jpg"
-        },
-        {
-            id: 3,
-            name: "Dima",
-            followed: true,
-            status: "I'am King",
-            country: "Russia",
-            city: "Moscow",
-            imgUrl: "https://i.pinimg.com/474x/d7/93/f7/d793f74bd7c7ce93405f3b221897e717.jpg"
-        }]
-};
+let initialState = {users: []};
 
 
 const userReduser = (state= initialState, action) => {
