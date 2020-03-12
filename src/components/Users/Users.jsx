@@ -6,13 +6,36 @@ import userPhoto from "../../assets/images/userPhoto.png"
 
 class Users extends React.Component {
 
-componentDidMount() {
-    axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-        this.props.setUsers(response.data.items)
-    })
-}
+    componentDidMount() {
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.allItems}`).then(response => {
+            this.props.setUsers(response.data.items);
+            this.props.setAllItems(response.data.totalCount/10);
+        })
+    }
+
+    onCangedPage = (pageNamber) => {
+        this.props.setCurrentPage(pageNamber)
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNamber}&count=${this.props.allItems}`).then(response => {
+            this.props.setUsers(response.data.items)
+        })
+
+    }
+
     render() {
+        let numberOfPages = Math.ceil(this.props.allItems / this.props.countItems);
+        let pages = [];
+        for (let i = 1; i <= numberOfPages; i++) {
+            pages.push(i);
+        }
         return <div>
+            <div>
+                {pages.map(p => {
+                    return <span className={this.props.currentPage === p && style.selectedPage}
+                                 onClick={(e) => this.onCangedPage(p)}>{p}</span>
+                })}
+
+
+            </div>
             {this.props.users.map(u =>
                 <div key={u.id}>}
                     <img className={style.userAvatar} src={u.photos.small != null ? u.photos.small : userPhoto}
