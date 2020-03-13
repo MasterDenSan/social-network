@@ -3,12 +3,15 @@ const UNFOLLOW = "UNFOLLOW";
 const SETUSERS = "SETUSERS";
 const SET_ALL_ITEMS = "SET_ALL_ITEMS";
 const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
+const TOGGLE_IS_PROGRESING = "TOGGLE_IS_PROGRESING";
 
 let initialState = {
     users: [],
     allItems:20,
     countItems:5,
-    currentPage:1
+    currentPage:1,
+    isProgresing: false
+
 };
 
 
@@ -44,6 +47,10 @@ const userReduser = (state= initialState, action) => {
             return {
                 ...state, currentPage: action.currentPage
             }
+            case TOGGLE_IS_PROGRESING:
+            return {
+                ...state, isProgresing: action.isProgresing
+            }
         default:
             return state
     }
@@ -55,6 +62,7 @@ export const unfollowAC = (userId) => ({type: UNFOLLOW, userId});
 export const setUsers = (users) => ({type: SETUSERS, users});
 export const setAllItemsAC = (countUsers) => ({type: SET_ALL_ITEMS, allItems: countUsers});
 export const setCurrentPageAC = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
+export const toggleIsProgresingAC = (isProgresing) => ({type: TOGGLE_IS_PROGRESING, isProgresing});
 
 
 export default userReduser;

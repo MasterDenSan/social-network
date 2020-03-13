@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Items/Preloader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/redux/user-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/redux/user-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,16 +47,17 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\project\new-project1\first-project\src\components\Users" />
-      <recent name="E:\project\new-project1\first-project\src\components\Navigation" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\project\new-project1\first-project\src\components\Users" />
       <recent name="E:\project\new-project1\first-project\src\components\redux" />
       <recent name="E:\project\new-project1\first-project\src\components\Dialogs" />
       <recent name="E:\project\new-project1\first-project\src\components\Profile\MyPosts" />
       <recent name="E:\project\new-project1\first-project\src\components\Dialogs\DialogsItem" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\new-project1\first-project\src\components" />
+      <recent name="E:\project\new-project1\first-project\src\components\Users" />
+      <recent name="E:\project\new-project1\first-project\src\components\Navigation" />
     </key>
   </component>
   <component name="RunManager">
@@ -126,7 +128,8 @@
       <workItem from="1583571854753" duration="2506000" />
       <workItem from="1583933171599" duration="6775000" />
       <workItem from="1583999479996" duration="7859000" />
-      <workItem from="1584019086112" duration="3103000" />
+      <workItem from="1584019086112" duration="4475000" />
+      <workItem from="1584089702967" duration="3106000" />
     </task>
     <servers />
   </component>
@@ -150,22 +153,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582285823822" />
-    <state width="1899" height="266" key="GridCell.Tab.0.bottom" timestamp="1584010290000">
+    <state width="1899" height="266" key="GridCell.Tab.0.bottom" timestamp="1584044566028">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584010290000" />
-    <state width="1899" height="266" key="GridCell.Tab.0.center" timestamp="1584010290000">
+    <state width="1899" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584044566028" />
+    <state width="1899" height="266" key="GridCell.Tab.0.center" timestamp="1584044566028">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="266" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584010290000" />
-    <state width="1899" height="266" key="GridCell.Tab.0.left" timestamp="1584010290000">
+    <state width="1899" height="266" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584044566028" />
+    <state width="1899" height="266" key="GridCell.Tab.0.left" timestamp="1584044566028">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="266" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584010290000" />
-    <state width="1899" height="266" key="GridCell.Tab.0.right" timestamp="1584010290000">
+    <state width="1899" height="266" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584044566028" />
+    <state width="1899" height="266" key="GridCell.Tab.0.right" timestamp="1584044566028">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584010290000" />
+    <state width="1899" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584044566028" />
     <state x="491" y="255" key="SettingsEditor" timestamp="1583313458252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -184,8 +187,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/redux/user-reducer.js</url>
-          <line>14</line>
+          <line>17</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Users/UsersContainer.jsx</url>
+          <line>50</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
