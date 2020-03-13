@@ -57,12 +57,12 @@ const userReduser = (state= initialState, action) => {
 }
 
 
-export const followAC = (userId) => ({type: FOLLOW, userId});
-export const unfollowAC = (userId) => ({type: UNFOLLOW, userId});
+export const follow = (userId) => ({type: FOLLOW, userId});
+export const unfollow = (userId) => ({type: UNFOLLOW, userId});
 export const setUsers = (users) => ({type: SETUSERS, users});
-export const setAllItemsAC = (countUsers) => ({type: SET_ALL_ITEMS, allItems: countUsers});
-export const setCurrentPageAC = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
-export const toggleIsProgresingAC = (isProgresing) => ({type: TOGGLE_IS_PROGRESING, isProgresing});
+export const setAllItems = (countUsers) => ({type: SET_ALL_ITEMS, allItems: countUsers});
+export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
+export const toggleIsProgresing = (isProgresing) => ({type: TOGGLE_IS_PROGRESING, isProgresing});
 
 
 export default userReduser;
