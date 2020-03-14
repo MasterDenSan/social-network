@@ -8,7 +8,7 @@ let initialState = {
         {id: 2, massege: "My first post", likeCounter: 16}
     ],
     newPostText: "It-kamasutra.com",
-    userProfilePage: null
+    profile: null
 };
 
 
@@ -19,7 +19,6 @@ const profileReducer = (state = initialState, action) => {
                 ...state,
                 newPostText: "",
                 posts: [...state.posts, {id: state.posts.length + 1, massege: state.newPostText, likeCounter: 0}]
-
             }
         case UPDATE_NEW_POST:
             return {
@@ -29,7 +28,7 @@ const profileReducer = (state = initialState, action) => {
         case SET_USER_PROFILE:
             return {
                 ...state,
-                userProfilePage: action.userProfilePage
+                profile: action.profile
             }
         default:
             return state
@@ -41,7 +40,7 @@ export const addPostActionCreator = () =>
     ({type: ADD_POST});
 export const updateNewPostActionCreator = (text) =>
     ({type: UPDATE_NEW_POST, newText: text});
-export const setUserProfile = (userProfilePage) =>
-    ({type: SET_USER_PROFILE, newText: userProfilePage});
+export const setUserProfile = (profile) =>
+    ({type: SET_USER_PROFILE, profile: profile });
 
 export default profileReducer;
