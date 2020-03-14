@@ -15,6 +15,7 @@ const ProfileInformation = (props) => {
         <span className={s.user__description__item}>Web cite: Google.com</span>
       </div>
     </div>
+        <img src={props.profile.photos.large}/>
   </div>
   )
 }
