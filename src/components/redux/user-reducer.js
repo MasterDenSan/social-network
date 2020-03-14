@@ -8,7 +8,7 @@ const TOGGLE_IS_PROGRESING = "TOGGLE_IS_PROGRESING";
 let initialState = {
     users: [],
     allItems:20,
-    countItems:5,
+    countItems:10,
     currentPage:1,
     isProgresing: false
 
