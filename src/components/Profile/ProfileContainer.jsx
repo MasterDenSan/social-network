@@ -29,6 +29,7 @@ let mapStateToProps = (state) => ({
     profile: state.profilePage.profile
 })
 
+
 let UrlChangeRouterComponent = withRouter(ProfileContainer);
 
 export default connect(mapStateToProps, {setUserProfile})(UrlChangeRouterComponent);
