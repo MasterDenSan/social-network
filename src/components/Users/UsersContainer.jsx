@@ -16,7 +16,9 @@ class UsersComponentAPI extends React.Component {
 
     componentDidMount() {
         this.props.toggleIsProgresing(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.countItems}`).then(response => {
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.countItems}`, {
+            withCredentials: true
+        }).then(response => {
             this.props.toggleIsProgresing(false);
             this.props.setUsers(response.data.items);
             this.props.setAllItems(response.data.totalCount);
@@ -26,7 +28,9 @@ class UsersComponentAPI extends React.Component {
     onCangedPage = (pageNamber) => {
         this.props.toggleIsProgresing(true);
         this.props.setCurrentPage(pageNamber)
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNamber}&count=${this.props.countItems}`).then(response => {
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNamber}&count=${this.props.countItems}`, {
+            withCredentials: true
+        }).then(response => {
             this.props.toggleIsProgresing(false);
             this.props.setUsers(response.data.items)
         })
