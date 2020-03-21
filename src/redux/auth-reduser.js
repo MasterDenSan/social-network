@@ -1,3 +1,5 @@
+import {authAPI} from "../DAL/api";
+
 const SET_USER_DATA = "SET_USER_DATA";
 
 
@@ -22,9 +24,18 @@ const authReduser = (state = initialState, action) => {
     }
 }
 
+//Actions
+export const setUserData = (idUser, login, email) =>
+    ({type: SET_USER_DATA, data: {idUser, login, email}});
 
-export const setUserData = (idUser, email, login) =>
-    ({type: SET_USER_DATA, data: {idUser, email, login}});
+//Thunks
+export const getAuth = () =>{
+    return (dispatch) =>{
+        authAPI.getMeAuth().then(data => {
+            let {idUser, login, email} = data
+            dispatch(setUserData(idUser, login, email))
+        });
 
-
+    }
+}
 export default authReduser;

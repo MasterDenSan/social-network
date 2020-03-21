@@ -1,13 +1,10 @@
 import {
-    follow,
-    setAllItems,
+    follow, getUsers,
     setCurrentPage,
-    setUsers, toggleIsProgresing,
     unfollow
-} from "../redux/user-reducer";
+} from "../../redux/user-reducer";
 import {connect} from "react-redux";
 import React from "react";
-import * as axios from "axios";
 import Users from "./Users";
 import Preloader from "../Items/Preloader";
 
@@ -15,25 +12,12 @@ import Preloader from "../Items/Preloader";
 class UsersComponentAPI extends React.Component {
 
     componentDidMount() {
-        this.props.toggleIsProgresing(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.countItems}`, {
-            withCredentials: true
-        }).then(response => {
-            this.props.toggleIsProgresing(false);
-            this.props.setUsers(response.data.items);
-            this.props.setAllItems(response.data.totalCount);
-        })
+        this.props.getUsers(this.props.currentPage, this.props.countItems);
     }
 
     onCangedPage = (pageNamber) => {
-        this.props.toggleIsProgresing(true);
-        this.props.setCurrentPage(pageNamber)
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNamber}&count=${this.props.countItems}`, {
-            withCredentials: true
-        }).then(response => {
-            this.props.toggleIsProgresing(false);
-            this.props.setUsers(response.data.items)
-        })
+        this.props.setCurrentPage(pageNamber)  //page selection
+        this.props.getUsers(pageNamber, this.props.countItems);
     }
 
     render() {
@@ -47,6 +31,8 @@ class UsersComponentAPI extends React.Component {
                 onCangedPage={this.onCangedPage}
                 follow={this.props.follow}
                 unfollow={this.props.unfollow}
+                isProcessingArr={this.props.isProcessingArr}
+                toggleIsProcessing={this.props.toggleIsProcessing}
             />
         </>
     }
@@ -59,18 +45,17 @@ const getStateToProps = (state) => {
         allItems: state.usersPage.allItems,
         countItems: state.usersPage.countItems,
         currentPage: state.usersPage.currentPage,
-        isProgresing: state.usersPage.isProgresing
+        isProgresing: state.usersPage.isProgresing,
+        isProcessingArr: state.usersPage.isProcessingArr
     }
 }
 
 const UsersContainer = connect(getStateToProps,
     {
-        follow: follow,
-        unfollow: unfollow,
-        setUsers: setUsers,
+        follow,
+        unfollow,
         setCurrentPage: setCurrentPage,
-        setAllItems: setAllItems,
-        toggleIsProgresing: toggleIsProgresing
+        getUsers
     })(UsersComponentAPI);
 
 export default UsersContainer;
