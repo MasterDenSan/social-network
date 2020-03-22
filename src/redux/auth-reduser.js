@@ -29,11 +29,13 @@ export const setUserData = (idUser, login, email) =>
     ({type: SET_USER_DATA, data: {idUser, login, email}});
 
 //Thunks
-export const getAuth = () =>{
-    return (dispatch) =>{
-        authAPI.getMeAuth().then(data => {
-            let {idUser, login, email} = data
-            dispatch(setUserData(idUser, login, email))
+export const getAuth = () => {
+    return (dispatch) => {
+        authAPI.getMeAuth().then(response => {
+            if (response.data.resultCode === 0) {
+                let {idUser, login, email} = response.data.data
+                dispatch(setUserData(idUser, login, email))
+            }
         });
 
     }

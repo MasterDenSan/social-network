@@ -92,7 +92,7 @@ export const getUsers = (currentPage, countItems) => {
 export const unfollow = (userId) => {
     return (dispatch) => {
         dispatch(toggleIsProcessing(true, userId));
-        usersAPI.unFollow(userId).then(resultCode => {
+        usersAPI.unfollow(userId).then(resultCode => {
             if (resultCode === 0) {
                 dispatch(unfollowAC(userId));
             }

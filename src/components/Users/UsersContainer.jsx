@@ -7,6 +7,7 @@ import {connect} from "react-redux";
 import React from "react";
 import Users from "./Users";
 import Preloader from "../Items/Preloader";
+import {withAuthRedirect} from "../../HOC/withAuthRedirect";
 
 
 class UsersComponentAPI extends React.Component {
@@ -32,7 +33,6 @@ class UsersComponentAPI extends React.Component {
                 follow={this.props.follow}
                 unfollow={this.props.unfollow}
                 isProcessingArr={this.props.isProcessingArr}
-                toggleIsProcessing={this.props.toggleIsProcessing}
             />
         </>
     }
@@ -54,11 +54,13 @@ const UsersContainer = connect(getStateToProps,
     {
         follow,
         unfollow,
-        setCurrentPage: setCurrentPage,
+        setCurrentPage,
         getUsers
     })(UsersComponentAPI);
 
-export default UsersContainer;
+
+
+export default withAuthRedirect(UsersContainer);
 
 /*const getDispatchToProps = (dispatch) => {
     return {

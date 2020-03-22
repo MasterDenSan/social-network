@@ -4,6 +4,7 @@ import DialogsItem from "./DialogsItem/DialogsItem";
 import Massege from "./Massege/Massege";
 
 
+
 const Dialogs = (props) => {
 
     let dialogElements = [props.dialogsPage.dialogs.map(d => <DialogsItem id={d.id} name={d.name}/>),
