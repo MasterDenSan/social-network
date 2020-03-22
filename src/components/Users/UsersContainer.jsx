@@ -8,6 +8,7 @@ import React from "react";
 import Users from "./Users";
 import Preloader from "../Items/Preloader";
 import {withAuthRedirect} from "../../HOC/withAuthRedirect";
+import {compose} from "redux";
 
 
 class UsersComponentAPI extends React.Component {
@@ -50,17 +51,13 @@ const getStateToProps = (state) => {
     }
 }
 
-const UsersContainer = connect(getStateToProps,
-    {
-        follow,
-        unfollow,
-        setCurrentPage,
-        getUsers
-    })(UsersComponentAPI);
+export  default compose(
+    withAuthRedirect,
+    connect(getStateToProps,{follow, unfollow, setCurrentPage, getUsers})
+)
+(UsersComponentAPI);
 
 
-
-export default withAuthRedirect(UsersContainer);
 
 /*const getDispatchToProps = (dispatch) => {
     return {
