@@ -2,9 +2,17 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import DialogsItem from "./DialogsItem/DialogsItem";
 import Massege from "./Massege/Massege";
+import {Field, reduxForm} from "redux-form";
+import {maxLengthCreator, minLengthCreator, required} from "../../Utilits/Validators";
+import {TextArea} from "../ItemsControl/FormControl/FormControl";
+
+//обьявляем валидаторы
+const maxLength50 = maxLengthCreator(50);
+const minLength8 = minLengthCreator(8)
 
 
 
+//создание презинтационной компаненты
 const Dialogs = (props) => {
 
     let dialogElements = [props.dialogsPage.dialogs.map(d => <DialogsItem id={d.id} name={d.name}/>),
@@ -12,15 +20,9 @@ const Dialogs = (props) => {
     let massageElements = props.dialogsPage.masseges.map(m => <Massege massage={m.massege}/>)
 
 
-    let addMessage = () => {
-        props.addDialogMessage()
+    let addMessage = (values) => {
+        props.addDialogMessage(values.messageBody)
     }
-
-    let onChangeText = (e) => {
-        let body = e.target.value
-        props.updateNewMessage(body)
-    }
-
 
     return (
         <div className={s.container}>
@@ -32,18 +34,27 @@ const Dialogs = (props) => {
             </div>
             <div className={s.chat}>
                 {massageElements}
-                <div>
-                    <textarea onChange={onChangeText}
-                              value={props.dialogsPage.newDilogText}
-                              placeholder={"Enter your message"}/>
-                </div>
-                <div>
-                    <button onClick={addMessage}>AddMassege</button>
-                </div>
+             <DialogsReduxForm onSubmit={addMessage}/>
             </div>
         </div>
-
     );
 }
+
+//Создание формы с помощью redux-form
+const DilogsForm = (props) => {
+    return (
+        <form onSubmit={props.handleSubmit}>
+            <div>
+            <Field  placeholder={"Enter your message"} component={TextArea} name={"messageBody"}
+                validate={[required, maxLength50, minLength8]}></Field>
+            </div>
+            <div>
+                <button >AddMassege</button>
+            </div>
+        </form>
+    )
+}
+let DialogsReduxForm = reduxForm({form: "dialogsForm"})(DilogsForm)
+
 
 export default Dialogs;
