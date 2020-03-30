@@ -49,7 +49,7 @@ export const getUserProfile = (userId) => {
 
     return (dispatch) => {
         if (!userId) {
-            userId = 2;
+            userId = 6451;
         }
         profileAPI.getProfile(userId).then(response => {
             dispatch(setUserProfile(response.data));

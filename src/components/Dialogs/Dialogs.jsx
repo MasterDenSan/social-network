@@ -4,7 +4,7 @@ import DialogsItem from "./DialogsItem/DialogsItem";
 import Massege from "./Massege/Massege";
 import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, minLengthCreator, required} from "../../Utilits/Validators";
-import {TextArea} from "../ItemsControl/FormControl/FormControl";
+import {TextArea} from "../ItemsControl/FormControl/FormControls";
 
 //обьявляем валидаторы
 const maxLength50 = maxLengthCreator(50);
