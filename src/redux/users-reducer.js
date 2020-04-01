@@ -78,7 +78,7 @@ export const toggleIsProcessing = (isProgresing, userId) => ({type: TOGGLE_IS_PR
 
 
 //Thunks
-export const getUsers = (currentPage, countItems) => {
+export let requestUsers = (currentPage, countItems) => {
 
     return (dispatch) => {
         dispatch(toggleIsProgresing(true));

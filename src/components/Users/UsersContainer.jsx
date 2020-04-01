@@ -1,25 +1,33 @@
 import {
-    follow, getUsers,
+    follow, requestUsers,
     setCurrentPage,
     unfollow
-} from "../../redux/user-reducer";
+} from "../../redux/users-reducer";
 import {connect} from "react-redux";
 import React from "react";
 import Users from "./Users";
 import Preloader from "../ItemsControl/Prealoader/Preloader";
 import {withAuthRedirect} from "../../HOC/withAuthRedirect";
 import {compose} from "redux";
+import {
+    getAllItems,
+    getCountItems,
+    getCurrentPage,
+    getIsProcessingArr,
+    getIsProgresing,
+    getUsers
+} from "../../redux/users-selectors";
 
 
 class UsersComponentAPI extends React.Component {
 
     componentDidMount() {
-        this.props.getUsers(this.props.currentPage, this.props.countItems);
+        this.props.requestUsers(this.props.currentPage, this.props.countItems);
     }
 
     onCangedPage = (pageNamber) => {
         this.props.setCurrentPage(pageNamber)  //page selection
-        this.props.getUsers(pageNamber, this.props.countItems);
+        this.props.requestUsers(pageNamber, this.props.countItems);
     }
 
     render() {
@@ -40,7 +48,7 @@ class UsersComponentAPI extends React.Component {
 }
 
 
-const getStateToProps = (state) => {
+/*const getStateToProps = (state) => {
     return {
         users: state.usersPage.users,
         allItems: state.usersPage.allItems,
@@ -49,11 +57,22 @@ const getStateToProps = (state) => {
         isProgresing: state.usersPage.isProgresing,
         isProcessingArr: state.usersPage.isProcessingArr
     }
+}*/
+
+const getStateToProps = (state) => {
+    return {
+        users: getUsers(state),
+        allItems: getAllItems(state),
+        countItems: getCountItems(state),
+        currentPage: getCurrentPage(state),
+        isProgresing: getIsProgresing(state),
+        isProcessingArr: getIsProcessingArr(state)
+    }
 }
 
 export  default compose(
     withAuthRedirect,
-    connect(getStateToProps,{follow, unfollow, setCurrentPage, getUsers})
+    connect(getStateToProps,{follow, unfollow, setCurrentPage, requestUsers})
 )
 (UsersComponentAPI);
 
