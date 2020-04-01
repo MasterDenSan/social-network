@@ -5,7 +5,7 @@ import {Input} from "../ItemsControl/FormControl/FormControls";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth-reduser";
 import {Redirect} from "react-router-dom";
-
+import styles from "../../components/ItemsControl/FormControl/FormControl.module.css"
 
 
 //объявляем валидаторы
@@ -22,6 +22,9 @@ const LoginForm = (props) => {
             </div>
             <div>
                 <Field type={"checkbox"} component={"input"} name={"rememberMe"}></Field><span>запомни меня</span>
+            </div>
+            <div className={styles.loginControlError}>
+                {props.error}
             </div>
             <div>
                 <button>Sign in</button>
