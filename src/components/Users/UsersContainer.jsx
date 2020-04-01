@@ -6,7 +6,7 @@ import {
 import {connect} from "react-redux";
 import React from "react";
 import Users from "./Users";
-import Preloader from "../ItemsControl/Preloader";
+import Preloader from "../ItemsControl/Prealoader/Preloader";
 import {withAuthRedirect} from "../../HOC/withAuthRedirect";
 import {compose} from "redux";
 
