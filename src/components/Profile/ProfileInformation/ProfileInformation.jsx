@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './ProfileInformation.module.css';
 import Preloader from "../../ItemsControl/Prealoader/Preloader";
-import ProfileStatus from "./ProfileStatus";
+import ProfileStatusWhuthHook from "./ProfileStatusWithHook";
 
 
 
@@ -11,7 +11,7 @@ const ProfileInformation = (props) => {
     }
 
     return (<div>
-            <ProfileStatus
+            <ProfileStatusWhuthHook
                 userStatus={props.userStatus}
                 updateUserStatus={props.updateUserStatus}/>
             {/*<img className={style.main__screen} alt='Главное изображение' src='https://gran-tur.com/assets/image/Blog/%D0%A2%D1%83%D1%80%D1%86%D0%B8%D1%8F/%D0%9F%D0%BB%D1%8F%D0%B6%D0%B8%20%D0%A2%D1%83%D1%80%D1%86%D0%B8%D0%B8/plyaz%20kliopatry.jpg' />*/}

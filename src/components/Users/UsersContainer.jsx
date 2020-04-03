@@ -31,7 +31,6 @@ class UsersComponentAPI extends React.Component {
     }
 
     render() {
-        console.log("USERS")
         return <>
             {this.props.isProgresing ? <Preloader/> : null}
             <Users
@@ -61,7 +60,6 @@ class UsersComponentAPI extends React.Component {
 }*/
 
 const getStateToProps = (state) => {
-    console.log("getStateToProps USERS")
     return {
         users: getUsers(state),
         allItems: getAllItems(state),

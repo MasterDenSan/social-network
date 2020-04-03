@@ -38,7 +38,9 @@ componentDidUpdate(prevProps, prevState) {
                 }
                 {this.state.edidMode &&
                 <div>
-                    <input autoFocus={true} onBlur={this.deactiveteEditMode} value={this.state.status}
+                    <input autoFocus={true}
+                           onBlur={this.deactiveteEditMode}
+                           value={this.state.status}
                            onChange={this.onCangeUserStatus}/>
                 </div>
                 }

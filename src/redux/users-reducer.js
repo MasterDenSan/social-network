@@ -15,8 +15,6 @@ let initialState = {
     currentPage: 1,
     isProgresing: true,
     isProcessingArr: [],
-    fake: 0
-
 };
 
 
@@ -63,7 +61,6 @@ const userReduser = (state = initialState, action) => {
                     ? [...state.isProcessingArr, action.userId]
                     : state.isProcessingArr.filter(id => id !== action.userId)
             }
-        case "FAKE": return {...state, fake: state.fake+1}
         default:
             return state
     }

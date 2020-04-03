@@ -1,11 +1,13 @@
 import {createSelector} from "reselect";
 
+//training selectors
 const getUsersSelector = (state)=> {
    return state.usersPage.users
 }
 export const getUsers = createSelector(getUsersSelector, (users)=>{
     return users.filter(f => true)
 })
+
 
 
 
