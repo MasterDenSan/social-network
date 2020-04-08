@@ -4,8 +4,12 @@ import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, minLengthCreator, required} from "../../../Utilits/Validators";
 import {TextArea} from "../../ItemsControl/FormControl/FormControls";
 
+window.props=[];
 
-const MyPosts = (props) => {
+const MyPosts = React.memo(props => {
+    console.log("RENDER");
+    window.props.push(props);
+
     let postsElements = props.posts.map(p => <Post massege={p.massege} likeCounter={p.likeCounter}/>)
 
     let addPost = (values) => {
@@ -16,7 +20,8 @@ const MyPosts = (props) => {
             {postsElements}
         </div>
     )
-}
+});
+
 //обьявляем валидаторы
 const maxLength50 = maxLengthCreator(50);
 const minLength8 = minLengthCreator(8)

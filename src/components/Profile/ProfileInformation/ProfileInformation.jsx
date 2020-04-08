@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './ProfileInformation.module.css';
 import Preloader from "../../ItemsControl/Prealoader/Preloader";
-import ProfileStatusWhuthHook from "./ProfileStatusWithHook";
+import ProfileStatusWhuthHook from "./ProfileStatusWithHooks";
 
 
 
