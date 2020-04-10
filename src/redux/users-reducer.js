@@ -78,41 +78,36 @@ export const toggleIsProcessing = (isProgresing, userId) => ({type: TOGGLE_IS_PR
 
 //Thunks
 export let requestUsers = (currentPage, countItems) => {
-
-    return (dispatch) => {
+    return async (dispatch) => {
         dispatch(toggleIsProgresing(true));
-        usersAPI.getUsers(currentPage, countItems).then(data => {
-            dispatch(toggleIsProgresing(false));
-            dispatch(setUsers(data.items));
-            dispatch(setAllItems(data.totalCount));
-        })
+        let data = await usersAPI.getUsers(currentPage, countItems);
+        dispatch(toggleIsProgresing(false));
+        dispatch(setUsers(data.items));
+        dispatch(setAllItems(data.totalCount));
     }
 }
+
+
+const unfollowFollow = async (dispatch, userId, apiMethod, actionCreator) => {
+    dispatch(toggleIsProcessing(true, userId));
+    let resultCode = await apiMethod(userId);
+    if (resultCode === 0) {
+        dispatch(actionCreator(userId));
+    }
+    dispatch(toggleIsProcessing(false, userId));
+}
+
+
 export const unfollow = (userId) => {
-    return (dispatch) => {
-        dispatch(toggleIsProcessing(true, userId));
-        usersAPI.unfollow(userId).then(resultCode => {
-            if (resultCode === 0) {
-                dispatch(unfollowAC(userId));
-            }
-            dispatch(toggleIsProcessing(false, userId));
-        })
+    return async (dispatch) => {
+        unfollowFollow(dispatch, userId, usersAPI.unfollow.bind(usersAPI), unfollowAC);
     }
 }
 export const follow = (userId) => {
-    return (dispatch) => {
-        dispatch(toggleIsProcessing(true, userId));
-        usersAPI.follow(userId).then(resultCode => {
-            if (resultCode === 0) {
-                dispatch(followAC(userId));
-            }
-            dispatch(toggleIsProcessing(false, userId));
-        })
+    return async (dispatch) => {
+        unfollowFollow(dispatch, userId, usersAPI.follow.bind(usersAPI), followAC);
     }
 }
-
-
-
 
 
 export default userReduser;

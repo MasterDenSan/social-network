@@ -28,7 +28,7 @@ const profileReducer = (state = initialState, action) => {
                 ...state,
                 profile: action.profile
             }
-            case SET_USER_STATUS:
+        case SET_USER_STATUS:
             return {
                 ...state, userStatus: action.userStatus
             }
@@ -53,30 +53,25 @@ export const deletePost = (postId) =>
 
 //Thunks
 export const getUserProfile = (userId) => {
-
-    return (dispatch) => {
-        profileAPI.getProfile(userId).then(response => {
-            dispatch(setUserProfile(response.data));
-        })
+    return async (dispatch) => {
+        let response = await profileAPI.getProfile(userId);
+        dispatch(setUserProfile(response.data));
     }
 }
 export const getUserStatus = (userId) => {
-
-    return (dispatch) => {
-        profileAPI.getStatus(userId).then(response => {
-            dispatch(setUserStatus(response.data));
-        })
+    return async (dispatch) => {
+        let response = await profileAPI.getStatus(userId)
+        dispatch(setUserStatus(response.data));
     }
 }
 export const updateUserStatus = (userStatus) => {
-
-    return (dispatch) =>
-        profileAPI.updateStatus(userStatus).then(response => {
-            if(response.data.resultCode === 0) {
-                dispatch(setUserStatus(userStatus));
-            }})
+    return async (dispatch) => {
+        let response = await profileAPI.updateStatus(userStatus);
+        if (response.data.resultCode === 0) {
+            dispatch(setUserStatus(userStatus));
+        }
     }
-
+}
 
 
 export default profileReducer;
