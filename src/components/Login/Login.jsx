@@ -1,7 +1,7 @@
 import React from "react";
-import {Field, reduxForm} from "redux-form";
+import {reduxForm} from "redux-form";
 import {maxLengthCreator, minLengthCreator, required} from "../../Utilits/Validators";
-import {Input} from "../ItemsControl/FormControl/FormControls";
+import {createrField, Input} from "../ItemsControl/FormControl/FormControls";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth-reduser";
 import {Redirect} from "react-router-dom";
@@ -11,20 +11,14 @@ import styles from "../../components/ItemsControl/FormControl/FormControl.module
 //объявляем валидаторы
 const maxLength50 = maxLengthCreator(50);
 const minLength8 = minLengthCreator(8)
-const LoginForm = (props) => {
+const LoginForm = ({handleSubmit, error}) => {
     return (
-        <form onSubmit={props.handleSubmit}>
-            <div>
-                <Field placeholder={"Email"} component={Input} name={"email"} validate={[required, maxLength50, minLength8]}></Field>
-            </div>
-            <div>
-                <Field placeholder={"Password"} component={Input} validate={[required, maxLength50, minLength8]} name={"password"} type={"password"}></Field>
-            </div>
-            <div>
-                <Field type={"checkbox"} component={"input"} name={"rememberMe"}></Field><span>запомни меня</span>
-            </div>
+        <form onSubmit={handleSubmit}>
+            {createrField(Input, "email", "Email",[required, maxLength50, minLength8] )}
+            {createrField(Input, "password","Password",[required, maxLength50, minLength8], {type: "password"})}
+            {createrField("input", "rememberMe", null, [], {type: "checkbox"}, "запомни меня")}
             <div className={styles.loginControlError}>
-                {props.error}
+                {error}
             </div>
             <div>
                 <button>Sign in</button>

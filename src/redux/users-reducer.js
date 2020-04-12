@@ -1,12 +1,13 @@
 import {usersAPI} from "../DAL/api";
+import {objectChangeToArray} from "../Utilits/ObjectHelper.js";
 
-const FOLLOW = "FOLLOW";
-const UNFOLLOW = "UNFOLLOW";
-const SETUSERS = "SETUSERS";
-const SET_ALL_ITEMS = "SET_ALL_ITEMS";
-const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
-const TOGGLE_IS_PROGRESING = "TOGGLE_IS_PROGRESING";
-const TOGGLE_IS_PROCESSING = "TOGGLE_IS_PROCESSING";
+const FOLLOW = "social-Network/users-reduser/FOLLOW";
+const UNFOLLOW = "social-Network/users-reduser/UNFOLLOW";
+const SETUSERS = "social-Network/users-reduser/SETUSERS";
+const SET_ALL_ITEMS = "social-Network/users-reduser/SET_ALL_ITEMS";
+const SET_CURRENT_PAGE = "social-Network/users-reduser/SET_CURRENT_PAGE";
+const TOGGLE_IS_PROGRESING = "social-Network/users-reduser/TOGGLE_IS_PROGRESING";
+const TOGGLE_IS_PROCESSING = "social-Network/users-reduser/TOGGLE_IS_PROCESSING";
 
 let initialState = {
     users: [],
@@ -22,21 +23,13 @@ const userReduser = (state = initialState, action) => {
     switch (action.type) {
         case FOLLOW:
             return {
-                ...state, users: state.users.map(u => {
-                    if (u.id === action.userId) {
-                        return {...u, followed: true}
-                    }
-                    return u;
-                })
+                ...state,
+                users: objectChangeToArray(state.users, "id", action.userId, {followed: true})
             }
         case UNFOLLOW:
             return {
-                ...state, users: state.users.map(u => {
-                    if (u.id === action.userId) {
-                        return {...u, followed: false}
-                    }
-                    return u;
-                })
+                ...state,
+                users: objectChangeToArray(state.users, "id", action.userId, {followed: false})
             }
         case SETUSERS:
             return {
@@ -96,8 +89,6 @@ const unfollowFollow = async (dispatch, userId, apiMethod, actionCreator) => {
     }
     dispatch(toggleIsProcessing(false, userId));
 }
-
-
 export const unfollow = (userId) => {
     return async (dispatch) => {
         unfollowFollow(dispatch, userId, usersAPI.unfollow.bind(usersAPI), unfollowAC);

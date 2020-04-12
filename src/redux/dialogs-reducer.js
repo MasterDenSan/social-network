@@ -1,5 +1,5 @@
 
-const ADD_DIALOG_MESSAGE = "ADD-DIALOG-MESSAGE";
+const ADD_DIALOG_MESSAGE = "social-Network/dialogs-reduser/ADD-DIALOG-MESSAGE";
 
 let initialState = {
     dialogs: [

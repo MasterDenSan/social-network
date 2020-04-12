@@ -1,9 +1,9 @@
 import {profileAPI} from "../DAL/api";
 
-const ADD_POST = "ADD-POST";
-const SET_USER_PROFILE = "SET_USER_PROFILE";
-const SET_USER_STATUS = "SET_USER_STATUS";
-const DELETE_POST = "DELETE_POST";
+const ADD_POST = "social-Network/profile-reduser/ADD-POST";
+const SET_USER_PROFILE = "social-Network/profile-reduser/SET_USER_PROFILE";
+const SET_USER_STATUS = "social-Network/profile-reduser/SET_USER_STATUS";
+const DELETE_POST = "social-Network/profile-reduser/DELETE_POST";
 
 let initialState = {
     posts: [
@@ -54,6 +54,7 @@ export const deletePost = (postId) =>
 //Thunks
 export const getUserProfile = (userId) => {
     return async (dispatch) => {
+        debugger
         let response = await profileAPI.getProfile(userId);
         dispatch(setUserProfile(response.data));
     }

@@ -1,6 +1,6 @@
 import {getAuth} from "./auth-reduser";
 
-const SET_INITIALIZED = "SET_INITIALIZED";
+const SET_INITIALIZED = "social-Network/app-reduser/SET_INITIALIZED";
 
 let initialState = {
     initialized: false

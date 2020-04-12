@@ -22,12 +22,14 @@ import {
 class UsersComponentAPI extends React.Component {
 
     componentDidMount() {
-        this.props.requestUsers(this.props.currentPage, this.props.countItems);
+        const {requestUsers, currentPage, countItems} = this.props;
+        requestUsers(currentPage, countItems);
     }
 
     onCangedPage = (pageNamber) => {
-        this.props.setCurrentPage(pageNamber)  //page selection
-        this.props.requestUsers(pageNamber, this.props.countItems);
+        const {setCurrentPage, requestUsers, countItems} = this.props;
+        setCurrentPage(pageNamber)  //page selection
+        requestUsers(pageNamber, countItems);
     }
 
     render() {
