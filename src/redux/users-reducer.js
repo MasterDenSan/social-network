@@ -16,6 +16,7 @@ let initialState = {
     currentPage: 1,
     isProgresing: true,
     isProcessingArr: [],
+    pozitionSize: 10
 };
 
 

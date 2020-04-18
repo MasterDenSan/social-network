@@ -31,3 +31,9 @@ export const getIsProgresing = (state)=> {
 export const getIsProcessingArr = (state)=> {
     return state.usersPage.isProcessingArr
 }
+
+export const getPozitionSize = (state)=> {
+    return state.usersPage.pozitionSize
+}
+
+

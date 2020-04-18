@@ -54,7 +54,6 @@ export const deletePost = (postId) =>
 //Thunks
 export const getUserProfile = (userId) => {
     return async (dispatch) => {
-        debugger
         let response = await profileAPI.getProfile(userId);
         dispatch(setUserProfile(response.data));
     }

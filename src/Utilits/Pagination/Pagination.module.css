@@ -1,4 +1,19 @@
+.pagination {
+  display: flex;
+    justify-content: center;
+}
 .selectedPage {
     font-weight: bold;
     color: brown;
+}
+.pageNumber {
+    padding: 2px;
+    border: 1px solid chocolate;
+    width: 30px;
+    height: 20px;
+
+    display: inline-flex;
+    justify-content: center;
+
+
 }

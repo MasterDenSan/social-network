@@ -14,7 +14,7 @@ import {
     getCountItems,
     getCurrentPage,
     getIsProcessingArr,
-    getIsProgresing,
+    getIsProgresing, getPozitionSize,
     getUsers
 } from "../../redux/users-selectors";
 
@@ -44,6 +44,7 @@ class UsersComponentAPI extends React.Component {
                 follow={this.props.follow}
                 unfollow={this.props.unfollow}
                 isProcessingArr={this.props.isProcessingArr}
+                pozitionSize={this.props.pozitionSize}
             />
         </>
     }
@@ -68,7 +69,8 @@ const getStateToProps = (state) => {
         countItems: getCountItems(state),
         currentPage: getCurrentPage(state),
         isProgresing: getIsProgresing(state),
-        isProcessingArr: getIsProcessingArr(state)
+        isProcessingArr: getIsProcessingArr(state),
+        pozitionSize: getPozitionSize(state)
     }
 }
 

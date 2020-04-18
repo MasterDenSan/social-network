@@ -1,19 +1,35 @@
 import style from "./Pagination.module.css";
-import React from "react";
+import React, {useState} from "react";
+import cn from "classnames";
 
- export const Pagination = ({allItems, countItems, currentPage, onCangedPage}) => {
+export const Pagination = ({allItems, countItems, currentPage, onCangedPage, pozitionSize = 10}) => {
     let numberOfPages = Math.ceil(allItems / countItems);
     let pages = [];
     for (let i = 1; i <= numberOfPages; i++) {
         pages.push(i);
     }
-    return (<div>
-        {pages.map(p => {
-            return <span className={currentPage === p && style.selectedPage}
-                         onClick={(e) => {
-                             onCangedPage(p)
-                         }}>{p}</span>
-        })}
-    </div>)
+    let pozitionCount = Math.ceil(numberOfPages / pozitionSize);
+    let [pozitionNumber, setPozitionNumber] = useState(1);
+    let startPozition = (pozitionNumber - 1) * pozitionSize + 1;
+    let endPozition = pozitionNumber * pozitionSize
+    return <div className={style.pagination}>
+        {pozitionNumber > 1 && <button onClick={() => {
+            setPozitionNumber(pozitionNumber - 1)
+        }}>назад</button>}
+        {pages
+            .filter(p => p >= startPozition && p <= endPozition)
+            .map(p => {
+                return <span className={ cn({
+                    [style.selectedPage]: currentPage === p},
+                    style.pageNumber)}
+                             key={p}
+                             onClick={(e) => {
+                                 onCangedPage(p)
+                             }}>{p}</span>
+            })}
+        {pozitionCount > pozitionNumber && <button onClick={() => {
+            setPozitionNumber(pozitionNumber + 1)
+        }}>вперед</button>}
+    </div>
 }
 export default Pagination;
