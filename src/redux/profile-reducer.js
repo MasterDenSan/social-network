@@ -4,6 +4,7 @@ const ADD_POST = "social-Network/profile-reduser/ADD-POST";
 const SET_USER_PROFILE = "social-Network/profile-reduser/SET_USER_PROFILE";
 const SET_USER_STATUS = "social-Network/profile-reduser/SET_USER_STATUS";
 const DELETE_POST = "social-Network/profile-reduser/DELETE_POST";
+const SAVE_PHOTO_SUCCESS = "social-Network/profile-reduser/SAVE_PHOTO_SUCCESS";
 
 let initialState = {
     posts: [
@@ -36,6 +37,10 @@ const profileReducer = (state = initialState, action) => {
             return {
                 ...state, posts: state.posts.filter(f => f.id !== action.postId)
             }
+        case SAVE_PHOTO_SUCCESS:
+            return {
+                ...state, profile: {...state.profile, photos: action.photos}
+            }
         default:
             return state
     }
@@ -50,6 +55,8 @@ export const setUserStatus = (userStatus) =>
     ({type: SET_USER_STATUS, userStatus: userStatus});
 export const deletePost = (postId) =>
     ({type: DELETE_POST, postId});
+export const savePhotoSuccess = (photos) =>
+    ({type: SAVE_PHOTO_SUCCESS, photos});
 
 //Thunks
 export const getUserProfile = (userId) => {
@@ -69,6 +76,14 @@ export const updateUserStatus = (userStatus) => {
         let response = await profileAPI.updateStatus(userStatus);
         if (response.data.resultCode === 0) {
             dispatch(setUserStatus(userStatus));
+        }
+    }
+}
+export const savePhoto = (file) => {
+    return async (dispatch) => {
+        let response = await profileAPI.savePhoto(file);
+        if (response.data.resultCode === 0) {
+            dispatch(savePhotoSuccess(response.data.data.photos));
         }
     }
 }

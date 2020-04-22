@@ -1,10 +1,7 @@
 .main__screen {
   max-width: 100%;
 }
-.user__profile {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 .user__avatar {
   width: 100px;
 }
