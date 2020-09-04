@@ -39,7 +39,7 @@ const PostForm = (props) => {
                 <button>Add Post</button>
             </div>
             <div>
-                <button>Remove</button>
+                {/*<button>Remove</button>*/}
             </div>
         </form>
     )
