@@ -10,7 +10,7 @@ const MyPosts = React.memo(props => {
     console.log("RENDER");
     window.props.push(props);
 
-    let postsElements = [...props.posts].reverse().map(p => <Post massege={p.massege} likeCounter={p.likeCounter}/>)
+    let postsElements = [...props.posts].reverse().map(p => <Post key={p.id} massege={p.massege} likeCounter={p.likeCounter}/>)
 
     let addPost = (values) => {
         props.addPost(values.postBody)
@@ -39,7 +39,7 @@ const PostForm = (props) => {
                 <button>Add Post</button>
             </div>
             <div>
-                <button>Remove</button>
+               {/* <button>Remove</button>*/}
             </div>
         </form>
     )

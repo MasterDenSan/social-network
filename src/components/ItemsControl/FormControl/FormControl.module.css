@@ -11,3 +11,8 @@
     color: red;
     padding: 5px;
 }
+.refreshCaptcha {
+    width: 20px;
+    height: 20px;
+
+}

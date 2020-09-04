@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import style from './ProfileInformation.module.css';
+import style from './ProfileInfo.module.css';
 import Preloader from "../../ItemsControl/Prealoader/Preloader";
 import ProfileStatusWhuthHook from "./ProfileStatusWithHooks";
 import userPhoto from "../../assets/images/userPhoto.png"
@@ -7,9 +7,15 @@ import ProfileData from "./ProfileData";
 import ProfileDataForm from "./ProfileDataForm";
 
 
-const ProfileInformation = ({profile, savePhoto, userStatus, updateUserStatus, isOwner}) => {
+const ProfileInfo = ({profile, savePhoto, userStatus, updateUserStatus, isOwner, saveProfile}) => {
 
     const [editMode, setEditMode] = useState(false);
+
+    const onSubmit = (formData) => {
+        saveProfile(formData).then(() => {
+            setEditMode(false);
+        })
+    }
 
     if (!profile) {
         return <Preloader/>
@@ -23,14 +29,14 @@ const ProfileInformation = ({profile, savePhoto, userStatus, updateUserStatus, i
 
     return (<div>
             Status: <ProfileStatusWhuthHook
-                userStatus={userStatus}
-                updateUserStatus={updateUserStatus}/>
+            userStatus={userStatus}
+            updateUserStatus={updateUserStatus}/>
             <div>
                 <img className={style.user__photo} src={profile.photos.large ? profile.photos.large : userPhoto}
                      alt={""}/>
                 {isOwner && <input type={"file"} onChange={onAddNewPhoto}/>}
                 {editMode
-                    ? <ProfileDataForm profile={profile}/>
+                    ? <ProfileDataForm profile={profile} onSubmit={onSubmit} initialValues={profile}/>
                     : <ProfileData profile={profile} isOwner={isOwner} goToEditMode={() => setEditMode(true)}/>}
             </div>
         </div>
@@ -38,4 +44,4 @@ const ProfileInformation = ({profile, savePhoto, userStatus, updateUserStatus, i
 }
 
 
-export default ProfileInformation;
+export default ProfileInfo;

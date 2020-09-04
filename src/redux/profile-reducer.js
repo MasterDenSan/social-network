@@ -1,4 +1,5 @@
 import {profileAPI} from "../DAL/api";
+import {stopSubmit} from "redux-form";
 
 const ADD_POST = "social-Network/profile-reduser/ADD-POST";
 const SET_USER_PROFILE = "social-Network/profile-reduser/SET_USER_PROFILE";
@@ -71,19 +72,32 @@ export const getUserStatus = (userId) => {
         dispatch(setUserStatus(response.data));
     }
 }
-export const updateUserStatus = (userStatus) => {
-    return async (dispatch) => {
+export const updateUserStatus = (userStatus) => async (dispatch) => {
         let response = await profileAPI.updateStatus(userStatus);
         if (response.data.resultCode === 0) {
             dispatch(setUserStatus(userStatus));
         }
     }
-}
+
 export const savePhoto = (file) => {
     return async (dispatch) => {
         let response = await profileAPI.savePhoto(file);
+        debugger
         if (response.data.resultCode === 0) {
             dispatch(savePhotoSuccess(response.data.data.photos));
+        }
+    }
+}
+export const saveProfile = (profile) => {
+    return async (dispatch, getState) => {
+        const userId = getState().auth.idUser;
+        const response = await profileAPI.saveProfile(profile);
+
+        if (response.data.resultCode === 0) {
+            dispatch(getUserProfile(userId));
+        }else{
+        dispatch(stopSubmit("profileEdit", {_error: response.data.messages[0]}));
+            return Promise.reject(response.data.messages[0]);
         }
     }
 }
