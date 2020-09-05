@@ -20,23 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="Commit Remove button">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInformation/ProfileData.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInformation/ProfileDataForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInformation/ProfileInfo.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAL/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAL/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ItemsControl/FormControl/FormControl.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ItemsControl/FormControl/FormControl.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInformation/ProfileInformation.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInformation/ProfileInformation.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInformation/ProfileInfo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/assets/images/[rutor.is]Spies.in.Disguise.2019.BDRip.1080p.seleZen.mkv.torrent" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/auth-reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reduser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +50,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Git clons/socialNetwork" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -187,6 +171,11 @@
       <workItem from="1599225926532" duration="102000" />
       <workItem from="1599249096386" duration="146000" />
       <workItem from="1599249252434" duration="9000" />
+      <workItem from="1599249322426" duration="510000" />
+      <workItem from="1599250275541" duration="931000" />
+      <workItem from="1599251278341" duration="4000" />
+      <workItem from="1599297451964" duration="12000" />
+      <workItem from="1599297465608" duration="932000" />
     </task>
     <servers />
   </component>
@@ -210,26 +199,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="Commit Remove button" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1599249259800">
+    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1599297462708">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599249259800" />
-    <state width="2027" height="200" key="GridCell.Tab.0.bottom" timestamp="1599249241488">
+    <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599297462708" />
+    <state width="2027" height="200" key="GridCell.Tab.0.bottom" timestamp="1599249832659">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2027" height="200" key="GridCell.Tab.0.bottom/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599249241488" />
-    <state width="2027" height="200" key="GridCell.Tab.0.center" timestamp="1599249241488">
+    <state width="2027" height="200" key="GridCell.Tab.0.bottom/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599249832659" />
+    <state width="2027" height="200" key="GridCell.Tab.0.center" timestamp="1599249832659">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2027" height="200" key="GridCell.Tab.0.center/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599249241488" />
-    <state width="2027" height="200" key="GridCell.Tab.0.left" timestamp="1599249241488">
+    <state width="2027" height="200" key="GridCell.Tab.0.center/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599249832659" />
+    <state width="2027" height="200" key="GridCell.Tab.0.left" timestamp="1599249832659">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2027" height="200" key="GridCell.Tab.0.left/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599249241488" />
-    <state width="2027" height="200" key="GridCell.Tab.0.right" timestamp="1599249241488">
+    <state width="2027" height="200" key="GridCell.Tab.0.left/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599249832659" />
+    <state width="2027" height="200" key="GridCell.Tab.0.right" timestamp="1599249832659">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2027" height="200" key="GridCell.Tab.0.right/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599249241488" />
+    <state width="2027" height="200" key="GridCell.Tab.0.right/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599249832659" />
     <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1599224334970">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
