@@ -2,12 +2,16 @@ import {getAuth} from "./auth-reduser";
 
 const SET_INITIALIZED = "social-Network/app-reduser/SET_INITIALIZED";
 
-let initialState = {
-    initialized: false
+type initialStateType = {
+    initialized: boolean
+}
+
+let initialState: initialStateType = {
+    initialized: false,
 };
 
 
-const appReduser = (state = initialState, action) => {
+const appReduser = (state = initialState, action:any): initialStateType  => {
     switch (action.type) {
         case SET_INITIALIZED:
             return {
@@ -19,11 +23,15 @@ const appReduser = (state = initialState, action) => {
     }
 }
 
+type setInitializedSuccessType = {
+    type: typeof SET_INITIALIZED
+}
+
 //Actions
-export const setInitializedSuccess = () => ({type: SET_INITIALIZED});
+export const setInitializedSuccess = (): setInitializedSuccessType  => ({type: SET_INITIALIZED});
 
 //Thunks
-export const initializeApp = () => (dispatch) => {
+export const initializeApp = () => (dispatch:any) => {
     let promise = dispatch(getAuth())
     //dispatch(someesle1())
     //dispatch(someesle2())
