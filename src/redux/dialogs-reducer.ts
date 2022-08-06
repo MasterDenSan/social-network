@@ -1,7 +1,25 @@
-
 const ADD_DIALOG_MESSAGE = "social-Network/dialogs-reduser/ADD-DIALOG-MESSAGE";
 
-let initialState = {
+type dialogsType = {
+    id: number
+    name: string
+}
+type massegeType = {
+    id: number
+    massege: string
+}
+
+type initialStateType = {
+    dialogs: dialogsType[],
+    masseges: massegeType[],
+}
+
+type addDialogMessageActionCreatorType = {
+    type: typeof ADD_DIALOG_MESSAGE
+    messageBody: string
+}
+
+let initialState: initialStateType = {
     dialogs: [
         {id: 1, name: "Victor"},
         {id: 2, name: "Dima"},
@@ -17,7 +35,7 @@ let initialState = {
 };
 
 
-const dialogReducer = (state = initialState, action) => {
+const dialogReducer = (state = initialState, action:any) => {
     switch (action.type) {
         case ADD_DIALOG_MESSAGE:
             return {
@@ -30,7 +48,7 @@ const dialogReducer = (state = initialState, action) => {
 }
 
 
-export const addDialogMessageActionCreator = (messageBody) =>
+export const addDialogMessageActionCreator = (messageBody: string) =>
     ({type: ADD_DIALOG_MESSAGE, messageBody});
 
 export default dialogReducer;

@@ -20,11 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="Commit Remove button">
-      <change afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/app-reduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/app-reduser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dialogs-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogs-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +186,9 @@
       <workItem from="1599297451964" duration="12000" />
       <workItem from="1599297465608" duration="932000" />
       <workItem from="1599299063801" duration="317000" />
-      <workItem from="1659724582285" duration="325000" />
+      <workItem from="1659724582285" duration="773000" />
+      <workItem from="1659725696356" duration="26000" />
+      <workItem from="1659808579313" duration="678000" />
     </task>
     <servers />
   </component>
@@ -210,36 +209,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit Remove button" />
     <option name="LAST_COMMIT_MESSAGE" value="Commit Remove button" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1599297462708">
-      <screen x="0" y="0" width="2048" height="1112" />
-    </state>
-    <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599297462708" />
-    <state width="2027" height="200" key="GridCell.Tab.0.bottom" timestamp="1599299079989">
-      <screen x="0" y="0" width="2048" height="1112" />
-    </state>
-    <state width="2027" height="200" key="GridCell.Tab.0.bottom/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599299079989" />
-    <state width="2027" height="200" key="GridCell.Tab.0.center" timestamp="1599299079989">
-      <screen x="0" y="0" width="2048" height="1112" />
-    </state>
-    <state width="2027" height="200" key="GridCell.Tab.0.center/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599299079989" />
-    <state width="2027" height="200" key="GridCell.Tab.0.left" timestamp="1599299079989">
-      <screen x="0" y="0" width="2048" height="1112" />
-    </state>
-    <state width="2027" height="200" key="GridCell.Tab.0.left/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599299079989" />
-    <state width="2027" height="200" key="GridCell.Tab.0.right" timestamp="1599299079989">
-      <screen x="0" y="0" width="2048" height="1112" />
-    </state>
-    <state width="2027" height="200" key="GridCell.Tab.0.right/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599299079989" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1599224334970">
-      <screen x="0" y="0" width="2048" height="1112" />
-    </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599224334970" />
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1599299352497">
-      <screen x="0" y="0" width="2048" height="1112" />
-    </state>
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112/2560.147.1920.1040@0.0.2048.1112" timestamp="1599299352497" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
