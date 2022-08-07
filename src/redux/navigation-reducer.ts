@@ -1,5 +1,14 @@
+type friendsType = {
+    id: number
+    name: string
+    img: string
+}
 
-let initialState = {
+type initialStateType = {
+    friends: friendsType[]
+}
+
+let initialState: initialStateType = {
     friends: [
         {
             id: 1,
@@ -24,7 +33,7 @@ let initialState = {
     ]
 };
 
-const navigationReducer = (state = initialState, action) => {
+const navigationReducer = (state = initialState, action: any) => {
 return state
 }
 
