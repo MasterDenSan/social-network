@@ -1,11 +1,19 @@
 import {authAPI, securutiAPI} from "../DAL/api";
 import {stopSubmit} from "redux-form";
+import {AppDispatchYtpe} from "./redux-store";
 
 const SET_USER_DATA = "social-Network/auth-reduser/SET_USER_DATA";
 const SET_CAPTCHA_URL_SUCCESS = "social-Network/auth-reduser/SET_CAPTCHA_URL_SUCCESS";
 
+type initialStateType = {
+    idUser?: number | null
+    email?: string | null
+    login?: string | null
+    isAuth?: boolean
+    captcha?: string | null
+}
 
-let initialState = {
+let initialState: initialStateType = {
     idUser: null,
     email: null,
     login: null,
@@ -14,7 +22,7 @@ let initialState = {
 };
 
 
-const authReduser = (state = initialState, action) => {
+const authReduser = (state = initialState, action: any) => {
     switch (action.type) {
         case SET_USER_DATA:
         case SET_CAPTCHA_URL_SUCCESS:
@@ -28,14 +36,20 @@ const authReduser = (state = initialState, action) => {
 }
 
 //Actions
-export const setUserData = (idUser, login, email, isAuth, captcha) =>
+export const setUserData = (
+    idUser?: number | null,
+    login?: string | null,
+    email?: string | null,
+    isAuth?: boolean,
+    captcha?: string | null
+) =>
     ({type: SET_USER_DATA, payload: {idUser, login, email, isAuth, captcha}});
-export const setCaptchaUrlSuccess = (captcha) =>
+export const setCaptchaUrlSuccess = (captcha: string) =>
     ({type: SET_CAPTCHA_URL_SUCCESS, payload: {captcha}});
 
 //Thunks
 export const getAuth = () => {
-    return async (dispatch) => {
+    return async (dispatch: AppDispatchYtpe) => {
         let response = await authAPI.getMeAuth();
         if (response.data.resultCode === 0) {
             let {id, login, email} = response.data.data
@@ -45,7 +59,7 @@ export const getAuth = () => {
 }
 
 export const logout = () => {
-    return async (dispatch) => {
+    return async (dispatch: AppDispatchYtpe) => {
         let response = await authAPI.logout();
         if (response.data.resultCode === 0) {
             dispatch(setUserData(null, null, null, false));
@@ -53,8 +67,8 @@ export const logout = () => {
     }
 }
 
-export const login = (email, password, rememberMe, captcha) => {
-    return async (dispatch) => {
+export const login = (email: string, password: string, rememberMe: any, captcha: any) => {
+    return async (dispatch: AppDispatchYtpe) => {
         let response = await authAPI.login(email, password, rememberMe, captcha);
         if (response.data.resultCode === 0) {
             dispatch(getAuth());
@@ -67,7 +81,7 @@ export const login = (email, password, rememberMe, captcha) => {
         }
     }
 }
-export const getCaptchaUrl = () => async (dispatch) => {
+export const getCaptchaUrl = () => async (dispatch: AppDispatchYtpe) => {
     const response = await securutiAPI.getCaptcha();
     const captcha = response.data.url;
     dispatch(setCaptchaUrlSuccess(captcha));
