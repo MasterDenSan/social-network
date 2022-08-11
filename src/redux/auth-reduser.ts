@@ -1,6 +1,6 @@
 import {authAPI, securutiAPI} from "../DAL/api";
 import {stopSubmit} from "redux-form";
-import {AppDispatchYtpe} from "./redux-store";
+import {AppDispatchType} from "./redux-store";
 
 const SET_USER_DATA = "social-Network/auth-reduser/SET_USER_DATA";
 const SET_CAPTCHA_URL_SUCCESS = "social-Network/auth-reduser/SET_CAPTCHA_URL_SUCCESS";
@@ -49,7 +49,7 @@ export const setCaptchaUrlSuccess = (captcha: string) =>
 
 //Thunks
 export const getAuth = () => {
-    return async (dispatch: AppDispatchYtpe) => {
+    return async (dispatch: AppDispatchType) => {
         let response = await authAPI.getMeAuth();
         if (response.data.resultCode === 0) {
             let {id, login, email} = response.data.data
@@ -59,7 +59,7 @@ export const getAuth = () => {
 }
 
 export const logout = () => {
-    return async (dispatch: AppDispatchYtpe) => {
+    return async (dispatch: AppDispatchType) => {
         let response = await authAPI.logout();
         if (response.data.resultCode === 0) {
             dispatch(setUserData(null, null, null, false));
@@ -68,7 +68,7 @@ export const logout = () => {
 }
 
 export const login = (email: string, password: string, rememberMe: any, captcha: any) => {
-    return async (dispatch: AppDispatchYtpe) => {
+    return async (dispatch: AppDispatchType) => {
         let response = await authAPI.login(email, password, rememberMe, captcha);
         if (response.data.resultCode === 0) {
             dispatch(getAuth());
@@ -81,7 +81,7 @@ export const login = (email: string, password: string, rememberMe: any, captcha:
         }
     }
 }
-export const getCaptchaUrl = () => async (dispatch: AppDispatchYtpe) => {
+export const getCaptchaUrl = () => async (dispatch: AppDispatchType) => {
     const response = await securutiAPI.getCaptcha();
     const captcha = response.data.url;
     dispatch(setCaptchaUrlSuccess(captcha));
