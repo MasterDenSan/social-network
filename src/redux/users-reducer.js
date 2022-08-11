@@ -20,7 +20,7 @@ let initialState = {
 };
 
 
-const userReduser = (state = initialState, action: any) => {
+const userReduser = (state = initialState, action) => {
     switch (action.type) {
         case FOLLOW:
             return {
