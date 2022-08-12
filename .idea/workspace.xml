@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="Commit Remove button">
-      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAL/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAL/api.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,18 +70,18 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\project\new-project1\first-project\src\components" />
-      <recent name="E:\project\new-project1\first-project\src" />
-      <recent name="E:\project\new-project1\first-project\src\components\Users" />
-      <recent name="E:\project\new-project1\first-project\src\components\Navigation" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\project\new-project1\first-project\src\components\redux" />
       <recent name="E:\project\new-project1\first-project\src\components\Header" />
       <recent name="E:\project\new-project1\first-project\src\components\Profile" />
       <recent name="E:\project\new-project1\first-project\src\components\Users" />
       <recent name="E:\project\new-project1\first-project\src\components\Dialogs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\new-project1\first-project\src\components" />
+      <recent name="E:\project\new-project1\first-project\src" />
+      <recent name="E:\project\new-project1\first-project\src\components\Users" />
+      <recent name="E:\project\new-project1\first-project\src\components\Navigation" />
     </key>
   </component>
   <component name="RunManager">
@@ -192,6 +193,7 @@
       <workItem from="1659980616239" duration="730000" />
       <workItem from="1659981362412" duration="1168000" />
       <workItem from="1660055984197" duration="2902000" />
+      <workItem from="1660322741834" duration="533000" />
     </task>
     <servers />
   </component>
