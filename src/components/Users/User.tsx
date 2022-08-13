@@ -1,10 +1,19 @@
-import React from "react";
+import React, {FC} from "react";
 import style from "./User.module.css";
 import userPhoto from "../assets/images/userPhoto.png";
 import {NavLink} from "react-router-dom";
 
 
-const User = ({user, follow, unfollow, isProcessingArr}) => {
+
+
+type UserType = {
+    user: any
+    follow: (id: number) => void
+    unfollow: (id: number) => void
+    isProcessingArr: []
+}
+
+const User: FC<UserType> = ({user, follow, unfollow, isProcessingArr}) => {
 
 
     return <div>
