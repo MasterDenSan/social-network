@@ -6,11 +6,19 @@ import {NavLink} from "react-router-dom";
 
 
 
-type UserType = {
+export type UserType = {
     user: any
     follow: (id: number) => void
     unfollow: (id: number) => void
     isProcessingArr: []
+}
+
+export type onlyUser = {
+    id: number
+    photos: any
+    name: string
+    status: string
+    followed: boolean
 }
 
 const User: FC<UserType> = ({user, follow, unfollow, isProcessingArr}) => {
