@@ -1,9 +1,17 @@
-import React from "react";
+import React, {FC} from "react";
 import Pagination from "../../Utilits/Pagination/Pagination";
-import User from "./User";
+import User, {onlyUser, UserType} from "./User";
 
+interface Users extends UserType {
+    allItems: []
+    countItems: []
+    currentPage: number
+    onCangedPage: () => void
+    pozitionSize: number
+    users: onlyUser[]
+}
 
-const Users = ({allItems, countItems, currentPage, onCangedPage, isProcessingArr, unfollow, follow, users, pozitionSize, ...props}) => {
+const Users:FC<Users> = ({allItems, countItems, currentPage, onCangedPage, isProcessingArr, unfollow, follow, users, pozitionSize, ...props}) => {
 
     return <div>
         <Pagination allItems={allItems}
