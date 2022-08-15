@@ -4,14 +4,23 @@ import User, {onlyUser, UserType} from "./User";
 
 interface Users extends UserType {
     allItems: []
-    countItems: []
+    countItems: number
     currentPage: number
-    onCangedPage: () => void
+    onCangedPage: (page: number) => void
     pozitionSize: number
     users: onlyUser[]
 }
 
-const Users:FC<Users> = ({allItems, countItems, currentPage, onCangedPage, isProcessingArr, unfollow, follow, users, pozitionSize, ...props}) => {
+const Users:FC<Users> = ({
+                             allItems,
+                             countItems,
+                             currentPage,
+                             onCangedPage,
+                             isProcessingArr,
+                             unfollow,
+                             follow,
+                             users,
+                             pozitionSize, ...props}) => {
 
     return <div>
         <Pagination allItems={allItems}
