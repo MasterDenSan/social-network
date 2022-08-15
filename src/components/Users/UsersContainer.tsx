@@ -17,16 +17,32 @@ import {
     getIsProgresing, getPozitionSize,
     getUsers
 } from "../../redux/users-selectors";
+import {RootState} from "../../redux/redux-store";
+import {onlyUser} from "./User";
 
 
-class UsersComponentAPI extends React.Component {
+export interface IUsersComponentAPI {
+    requestUsers:(currentPage: number, countItems: number) => void
+    currentPage: number
+    countItems: number
+    setCurrentPage: (page: number) => void
+    isProgresing: boolean
+    allItems: []
+    users: onlyUser[]
+    follow: (id: number) => void
+    unfollow: (id: number) => void
+    isProcessingArr: []
+    pozitionSize: number
+}
+
+class UsersComponentAPI extends React.Component<IUsersComponentAPI> {
 
     componentDidMount() {
         const {requestUsers, currentPage, countItems} = this.props;
         requestUsers(currentPage, countItems);
     }
 
-    onCangedPage = (pageNamber) => {
+    onCangedPage = (pageNamber: number) => {
         const {setCurrentPage, requestUsers, countItems} = this.props;
         setCurrentPage(pageNamber)  //page selection
         requestUsers(pageNamber, countItems);
@@ -62,7 +78,7 @@ class UsersComponentAPI extends React.Component {
     }
 }*/
 
-const getStateToProps = (state) => {
+const getStateToProps = (state: RootState) => {
     return {
         users: getUsers(state),
         allItems: getAllItems(state),

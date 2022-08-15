@@ -7,7 +7,7 @@ import {NavLink} from "react-router-dom";
 
 
 export type UserType = {
-    user: any
+    user?: any
     follow: (id: number) => void
     unfollow: (id: number) => void
     isProcessingArr: []
