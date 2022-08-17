@@ -1,18 +1,35 @@
-import React from 'react';
+import React, {FC} from 'react';
 import Post from './Post/Post';
-import {Field, reduxForm} from "redux-form";
+import {Field, InjectedFormProps, reduxForm} from "redux-form";
 import {maxLengthCreator, minLengthCreator, required} from "../../../Utilits/Validators";
 import {TextArea} from "../../ItemsControl/FormControl/FormControls";
 
+declare global {
+    interface Window {
+        props?: any
+    }
+}
+
 window.props=[];
 
-const MyPosts = React.memo(props => {
+type Post = {
+    id: number
+    massege: string
+    likeCounter: number
+}
+
+type MyPostsT = {
+    posts: Post[]
+    addPost: (post: string) => void
+}
+
+const MyPosts: FC<MyPostsT> = React.memo(props => {
     console.log("RENDER");
     window.props.push(props);
 
     let postsElements = [...props.posts].reverse().map(p => <Post key={p.id} massege={p.massege} likeCounter={p.likeCounter}/>)
 
-    let addPost = (values) => {
+    let addPost = (values: any) => {
         props.addPost(values.postBody)
     }
     return (<div>
@@ -28,7 +45,7 @@ const minLength8 = minLengthCreator(8)
 
 
 //Создание формы с помощью redux-form
-const PostForm = (props) => {
+const PostForm:FC<InjectedFormProps> = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
             <div>

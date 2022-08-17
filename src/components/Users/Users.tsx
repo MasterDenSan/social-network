@@ -20,7 +20,8 @@ const Users:FC<Users> = ({
                              unfollow,
                              follow,
                              users,
-                             pozitionSize, ...props}) => {
+                             pozitionSize, ...props
+}) => {
 
     return <div>
         <Pagination allItems={allItems}
