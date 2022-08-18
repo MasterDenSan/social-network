@@ -1,7 +1,26 @@
-import React from "react";
+import React, {FC} from "react";
 import style from './ProfileInfo.module.css';
 
-const ProfileData = ({profile, isOwner, goToEditMode}) => {
+type ProfileT = {
+    fullName: string
+    lookingForAJob: boolean
+    lookingForAJobDescription: string
+    aboutMe: string
+    contacts: any
+}
+
+type ProfileDataT = {
+    profile: ProfileT
+    isOwner: boolean
+    goToEditMode: () => void
+}
+
+type ContactsT = {
+    contactTitle: string
+    contactValue: string
+}
+
+const ProfileData: FC<ProfileDataT> = ({profile, isOwner, goToEditMode}) => {
     return <div>
         {isOwner && <button onClick={goToEditMode}>Edit</button>}
         <div>
@@ -27,7 +46,7 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
     </div>
 }
 
-const Contacts = ({contactTitle, contactValue}) => {
+const Contacts: FC<ContactsT> = ({contactTitle, contactValue}) => {
     return <div><b>{contactTitle}</b>: {contactValue}</div>
 }
 
