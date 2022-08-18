@@ -32,7 +32,8 @@ const MyPosts: FC<MyPostsT> = React.memo(props => {
     let addPost = (values: any) => {
         props.addPost(values.postBody)
     }
-    return (<div>
+    return (
+        <div>
             <PostReduxForm onSubmit={addPost}/>
             {postsElements}
         </div>
