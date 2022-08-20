@@ -4,14 +4,23 @@ import Preloader from "../../ItemsControl/Prealoader/Preloader";
 import ProfileStatusWhuthHook from "./ProfileStatusWithHooks";
 import userPhoto from "../../assets/images/userPhoto.png"
 import ProfileData from "./ProfileData";
-import ProfileDataForm from "./ProfileDataForm";
+import ProfileDataForm from "./ProfileDataFormе";
+import {FC} from "react";
 
+export type ProfileInfoT = {
+    profile: any
+    savePhoto: (photo: any) => void
+    userStatus: string
+    updateUserStatus: (status: string) => void
+    isOwner: boolean
+    saveProfile: (data: any) => Promise<any>
+}
 
-const ProfileInfo = ({profile, savePhoto, userStatus, updateUserStatus, isOwner, saveProfile}) => {
+const ProfileInfo: FC<ProfileInfoT> = ({profile, savePhoto, userStatus, updateUserStatus, isOwner, saveProfile}) => {
 
     const [editMode, setEditMode] = useState(false);
 
-    const onSubmit = (formData) => {
+    const onSubmit = (formData: any) => {
         saveProfile(formData).then(() => {
             setEditMode(false);
         })
@@ -20,7 +29,7 @@ const ProfileInfo = ({profile, savePhoto, userStatus, updateUserStatus, isOwner,
     if (!profile) {
         return <Preloader/>
     }
-    let onAddNewPhoto = (e) => {
+    let onAddNewPhoto = (e: any) => {
         if (e.target.files.length) {
             savePhoto(e.target.files[0]);
         }
@@ -36,6 +45,7 @@ const ProfileInfo = ({profile, savePhoto, userStatus, updateUserStatus, isOwner,
                      alt={""}/>
                 {isOwner && <input type={"file"} onChange={onAddNewPhoto}/>}
                 {editMode
+                    // @ts-ignore next line
                     ? <ProfileDataForm profile={profile} onSubmit={onSubmit} initialValues={profile}/>
                     : <ProfileData profile={profile} isOwner={isOwner} goToEditMode={() => setEditMode(true)}/>}
             </div>
