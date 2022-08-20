@@ -11,7 +11,8 @@ const ProfileDataForm = ({profile, handleSubmit, error}) => {
             {error}
         </div>}
         <div>
-            <b>Full Name</b>: {createrField(Input, "fullName", "Full Name", [])}
+            <b>Full Name
+            </b>: {createrField(Input, "fullName", "Full Name", [])}
         </div>
         <div>
             <b>Looking for a job</b>: {createrField("input", "lookingForAJob", null, [], {type: "checkbox"})}
