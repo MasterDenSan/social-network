@@ -6,6 +6,7 @@ describe("ProfileStatus component", () => {
     test("span should be in component on the first render", () => {
         const component = create(<ProfileStatus userStatus="test status!"/>);
         const instance = component.getInstance();
+        // @ts-ignore
         expect(instance.state.status).toBe("test status!");
     });
 
@@ -44,7 +45,9 @@ describe("ProfileStatus component", () => {
         const mockCallback = jest.fn();
         const component = create(<ProfileStatus userStatus="test status!" updateUserStatus={mockCallback}/>);
         const instance = component.getInstance();
+        // @ts-ignore
         instance.deactiveteEditMode();
+        // @ts-ignore
         instance.deactiveteEditMode();
         expect(mockCallback.mock.calls.length).toBe(2);
     });
