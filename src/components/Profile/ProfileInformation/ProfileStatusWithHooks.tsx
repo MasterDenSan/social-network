@@ -1,7 +1,12 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, FC} from "react";
 
 
- const ProfileStatusWhuthHook = (props) => {
+type ProfileStatusWhuthHookT = {
+    userStatus: string
+    updateUserStatus: (status: string) => void
+}
+
+const ProfileStatusWhuthHook: FC<ProfileStatusWhuthHookT> = (props) => {
 
 let [editMode, setEditMode] = useState(false)
 let [status, setStatus] = useState(props.userStatus)
@@ -20,7 +25,7 @@ let [status, setStatus] = useState(props.userStatus)
          props.updateUserStatus(status)
      }
 
-     let onCangeUserStatus = (e) => {
+     let onCangeUserStatus = (e:any) => {
          setStatus(e.currentTarget.value)
      }
 
