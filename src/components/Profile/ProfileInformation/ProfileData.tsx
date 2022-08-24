@@ -1,7 +1,7 @@
 import React, {FC} from "react";
 import style from './ProfileInfo.module.css';
 
-type ProfileT = {
+export type ProfileT = {
     fullName: string
     lookingForAJob: boolean
     lookingForAJobDescription: string
@@ -9,13 +9,13 @@ type ProfileT = {
     contacts: any
 }
 
-type ProfileDataT = {
+export type ProfileDataT = {
     profile: ProfileT
     isOwner: boolean
     goToEditMode: () => void
 }
 
-type ContactsT = {
+export type ContactsT = {
     contactTitle: string
     contactValue: string
 }
