@@ -21,9 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="Commit Remove button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInformation/ProfileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInformation/ProfileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInformation/ProfileDataFormе.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInformation/ProfileDataFormе.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +58,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/work/region-lk-react" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -215,7 +212,7 @@
       <workItem from="1661107245174" duration="232000" />
       <workItem from="1661151320289" duration="916000" />
       <workItem from="1661259187280" duration="2212000" />
-      <workItem from="1661328453558" duration="791000" />
+      <workItem from="1661328453558" duration="1283000" />
     </task>
     <servers />
   </component>

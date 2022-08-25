@@ -1,10 +1,9 @@
 import React from 'react';
 import s from './Profile.module.css';
-import ProfileInfo from './ProfileInformation/ProfileInfo';
+import ProfileInfo, {ProfileInfoT} from './ProfileInformation/ProfileInfo';
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
-
-const Profile = (props) => {
+const Profile = (props: ProfileInfoT) => {
 
     return (
         <main className={s.main}>
