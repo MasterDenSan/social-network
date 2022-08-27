@@ -3,24 +3,18 @@ import Dialogs from "./Dialogs";
 import {connect} from "react-redux";
 import {withAuthRedirect} from "../../HOC/withAuthRedirect";
 import {compose} from "redux";
+import {RootState} from "../../redux/redux-store";
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: RootState) => {
     return {
         dialogsPage: state.dialogsPage,
         friends: state.navigation.friends,
     }
 }
-const mapDispatchToProps = (dispatch) => {
-    return {
-        addDialogMessage: (messageBody) => {
-            dispatch(addDialogMessageActionCreator(messageBody))
-        }
-    }
-}
 
-export default compose(
-    connect(mapStateToProps, mapDispatchToProps),
+export default compose<any>(
+    connect(mapStateToProps, {addDialogMessageActionCreator}),
     withAuthRedirect
 )(Dialogs)
 
