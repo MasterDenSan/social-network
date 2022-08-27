@@ -1,27 +1,39 @@
-import React from 'react';
+import React, {FC} from 'react';
 import s from './Dialogs.module.css';
 import DialogsItem from "./DialogsItem/DialogsItem";
 import Massege from "./Massege/Massege";
-import {Field, reduxForm} from "redux-form";
+import {Field, InjectedFormProps, reduxForm} from "redux-form";
 import {maxLengthCreator, minLengthCreator, required} from "../../Utilits/Validators";
 import {TextArea} from "../ItemsControl/FormControl/FormControls";
+
+export type DialogsT = {
+    dialogsPage: {
+        dialogs: {
+            id: number
+            name: string
+        }[],
+        masseges: {
+            massege: string
+        }[]
+    },
+    friends: any[],
+    addDialogMessageActionCreator: (messageBody: string) => void
+}
 
 //обьявляем валидаторы
 const maxLength50 = maxLengthCreator(50);
 const minLength8 = minLengthCreator(8)
 
-
-
 //создание презинтационной компаненты
-const Dialogs = (props) => {
+const Dialogs: FC<DialogsT> = (props) => {
 
     let dialogElements = [props.dialogsPage.dialogs.map(d => <DialogsItem id={d.id} name={d.name}/>),
         props.friends.map(d => <DialogsItem img={d.img}/>)]
     let massageElements = props.dialogsPage.masseges.map(m => <Massege massage={m.massege}/>)
 
 
-    let addMessage = (values) => {
-        props.addDialogMessage(values.messageBody)
+    let addMessage = (values: any) => {
+        props.addDialogMessageActionCreator(values.messageBody)
     }
 
     return (
@@ -41,7 +53,7 @@ const Dialogs = (props) => {
 }
 
 //Создание формы с помощью redux-form
-const DilogsForm = (props) => {
+const DilogsForm:FC<InjectedFormProps>  = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
