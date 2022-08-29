@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {FC} from 'react';
 import style from './Header.module.css';
 import {NavLink} from "react-router-dom";
 
-const Header = (props) => {
+export type HeaderT = {
+    isAuth: boolean
+    login: string
+    logout: () => {}
+}
+
+const Header: FC<HeaderT> = (props) => {
     return (
         <header className={style.header}>
             <div className={style.loginBlock}>
