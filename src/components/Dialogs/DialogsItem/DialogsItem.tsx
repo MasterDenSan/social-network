@@ -3,9 +3,9 @@ import styles from './../Dialogs.module.css';
 import {NavLink} from 'react-router-dom';
 
 export type DialogsItemT = {
-    id: number
-    img: any
-    name: string
+    id?: number
+    img?: any
+    name?: string
 }
 
 const DialogsItem: FC<DialogsItemT> = (props) => {

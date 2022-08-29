@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import s from './Dialogs.module.css';
 import DialogsItem from "./DialogsItem/DialogsItem";
-import Massege from "./Massege/Massege";
+import Message from "./Message/Message";
 import {Field, InjectedFormProps, reduxForm} from "redux-form";
 import {maxLengthCreator, minLengthCreator, required} from "../../Utilits/Validators";
 import {TextArea} from "../ItemsControl/FormControl/FormControls";
@@ -29,7 +29,7 @@ const Dialogs: FC<DialogsT> = (props) => {
 
     let dialogElements = [props.dialogsPage.dialogs.map(d => <DialogsItem id={d.id} name={d.name}/>),
         props.friends.map(d => <DialogsItem img={d.img}/>)]
-    let massageElements = props.dialogsPage.masseges.map(m => <Massege massage={m.massege}/>)
+    let massageElements = props.dialogsPage.masseges.map(m => <Message massage={m.massege}/>)
 
 
     let addMessage = (values: any) => {
