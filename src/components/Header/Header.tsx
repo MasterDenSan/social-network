@@ -3,9 +3,9 @@ import style from './Header.module.css';
 import {NavLink} from "react-router-dom";
 
 export type HeaderT = {
-    isAuth: boolean
-    login: string
-    logout: () => {}
+    isAuth?: boolean
+    login?: string
+    logout?: () => {}
 }
 
 const Header: FC<HeaderT> = (props) => {
