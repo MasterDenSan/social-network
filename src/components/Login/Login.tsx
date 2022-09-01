@@ -1,17 +1,34 @@
-import React from "react";
-import {reduxForm} from "redux-form";
+import React, {FC} from "react";
+import {InjectedFormProps, reduxForm} from "redux-form";
 import {maxLengthCreator, minLengthCreator, required} from "../../Utilits/Validators";
 import {createrField, Input} from "../ItemsControl/FormControl/FormControls";
 import {connect} from "react-redux";
 import {getCaptchaUrl, login} from "../../redux/auth-reduser";
 import {Redirect} from "react-router-dom";
 import styles from "../../components/ItemsControl/FormControl/FormControl.module.css"
+import {RootState} from "../../redux/redux-store";
 
+export interface LoginFormI {
+    captchaUrl: any
+    getCaptchaUrl: () => void
+}
+export interface LoginI {
+    isAuth: boolean
+    login: any
+    captchaUrl: any
+    getCaptchaUrl: () => void
+}
+export interface onSubmitI {
+    email: string
+    password: string
+    rememberMe: boolean
+    captcha: string
+}
 
 //объявляем валидаторы
 const maxLength50 = maxLengthCreator(50);
 const minLength8 = minLengthCreator(8)
-const LoginForm = ({handleSubmit, error, captchaUrl, getCaptchaUrl}) => {
+const LoginForm:FC<InjectedFormProps & LoginFormI>   = ({handleSubmit, error, captchaUrl, getCaptchaUrl}) => {
     return (
         <form onSubmit={handleSubmit} >
             {createrField(Input, "email", "Email",[required, maxLength50, minLength8] )}
@@ -33,11 +50,12 @@ const LoginForm = ({handleSubmit, error, captchaUrl, getCaptchaUrl}) => {
 }
 
 
-let LoginReduxForm = reduxForm({form: 'loginForm'})(LoginForm)
+// @ts-ignore
+let LoginReduxForm = reduxForm<InjectedFormProps, LoginFormI>({form: 'loginForm'})(LoginForm)
 
 
-const Login = (props) => {
-    let onSubmit = (data) => {
+const Login: FC<LoginI> = (props) => {
+    let onSubmit = (data: any) => {
         props.login(data.email, data.password, data.rememberMe, data.captcha)}
 
         if(props.isAuth){
@@ -49,7 +67,7 @@ const Login = (props) => {
     </div>
 }
 
-const mapStateToProps = (state)=> ({
+const mapStateToProps = (state: RootState)=> ({
     isAuth: state.auth.isAuth,
     captchaUrl: state.auth.captcha
 })

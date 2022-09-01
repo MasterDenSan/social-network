@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="Commit Remove button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HOC/withAuthRedirect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/HOC/withAuthRedirect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/News/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/News/News.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +221,8 @@
       <workItem from="1661793431535" duration="711000" />
       <workItem from="1661857565919" duration="1675000" />
       <workItem from="1661943520175" duration="100000" />
-      <workItem from="1661965268358" duration="314000" />
+      <workItem from="1661965268358" duration="1170000" />
+      <workItem from="1662020901023" duration="1726000" />
     </task>
     <servers />
   </component>
