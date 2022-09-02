@@ -11,7 +11,7 @@ import {BrowserRouter, Route, withRouter} from 'react-router-dom';
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
->>>>>>> parent of a456b4c... Create withSuspense.jsx HOC then used in the App.js.:src/App.js
+>>>>>>> parent of a456b4c... Create withSuspense.tsx HOC then used in the App.js.:src/App.js
 import HeaderContainer from "./components/Header/HeaderContainer";
 import LoginPage from "./components/Login/Login";
 import {connect, Provider} from "react-redux";

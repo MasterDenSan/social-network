@@ -1,9 +1,27 @@
-import React from "react";
+import React, {FC} from "react";
 import style from "./FormControl.module.css";
 import {Field} from "redux-form";
+import {BaseFieldProps} from "redux-form/lib/Field";
 
 
-const FormControls = ({children, meta: {touched, error}}) => {
+export interface FormControlsI {
+    children: React.ReactNode
+    meta: {
+        touched: any
+        error: string
+    }
+}
+
+export interface createrFieldI extends BaseFieldProps{
+    component: any
+    name: string
+    placeholder: string
+    validate: any
+    text: string
+    props: any
+}
+
+const FormControls:FC<FormControlsI> = ({children, meta: {touched, error}}) => {
     let hasError = touched && error
     return (
         <div className={style.formControl + " " + (hasError ? style.error : "")}>
@@ -15,18 +33,24 @@ const FormControls = ({children, meta: {touched, error}}) => {
     )
 }
 
-export const Input = (props) => {
+export const Input = (props: any) => {
     const {input, meta, ...restProps} = props;
     return <FormControls {...props}> <input {...input} {...restProps}/> </FormControls>
 }
 
-export const TextArea = (props) => {
+export const TextArea = (props: any) => {
     const {input, meta, ...restProps} = props;
     return  <FormControls {...props}> <textarea {...input} {...restProps}/> </FormControls>
 }
 
 
-export const createrField = (component, name, placeholder, validate, props= {}, text = "") => <div>
+export const createrField = (
+    component: any,
+    name: string,
+    placeholder: string | null,
+    validate: any,
+    props= {},
+    text = "") => <div>
     <Field placeholder={placeholder}
            component={component}
            name={name}
