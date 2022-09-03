@@ -3,7 +3,7 @@ import Pagination from "../../Utilits/Pagination/Pagination";
 import User, {onlyUser, UserType} from "./User";
 
 interface Users extends UserType {
-    allItems: []
+    allItems: number
     countItems: number
     currentPage: number
     onCangedPage: (page: number) => void
