@@ -21,9 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="Commit Remove button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx~HEAD" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx~HEAD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HOC/withSuspense.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/HOC/withSuspense.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ItemsControl/FormControl/FormControls.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ItemsControl/FormControl/FormControls.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utilits/Pagination/Pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilits/Pagination/Pagination.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +226,8 @@
       <workItem from="1661943520175" duration="100000" />
       <workItem from="1661965268358" duration="1170000" />
       <workItem from="1662020901023" duration="3007000" />
-      <workItem from="1662121314083" duration="1334000" />
+      <workItem from="1662121314083" duration="1773000" />
+      <workItem from="1662212042824" duration="489000" />
     </task>
     <servers />
   </component>

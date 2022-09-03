@@ -27,7 +27,7 @@ export interface IUsersComponentAPI {
     countItems: number
     setCurrentPage: (page: number) => void
     isProgresing: boolean
-    allItems: []
+    allItems: number
     users: onlyUser[]
     follow: (id: number) => void
     unfollow: (id: number) => void
