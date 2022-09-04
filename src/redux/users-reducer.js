@@ -1,5 +1,5 @@
 import {usersAPI} from "../DAL/api";
-import {objectChangeToArray} from "../Utilits/ObjectHelper.js";
+import {objectChangeToArray} from "../Utilits/ObjectHelper.ts";
 
 const FOLLOW = "social-Network/users-reduser/FOLLOW";
 const UNFOLLOW = "social-Network/users-reduser/UNFOLLOW";
