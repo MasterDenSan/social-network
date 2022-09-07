@@ -6,9 +6,9 @@ import cn from 'classnames';
 export interface PaginationI {
     allItems: number
     countItems: number
-    currentPage: number
+    currentPage?: number
     onCangedPage: (page: number) => void
-    pozitionSize: number
+    pozitionSize?: number
 }
 
 export const Pagination: FC<PaginationI> = ({allItems, countItems, currentPage, onCangedPage, pozitionSize = 10}) => {
