@@ -9,6 +9,7 @@ describe("Pagination component tests", () => {
             allItems={11}
             countItems={1}
             pozitionSize={10}
+            onCangedPage={(page)=> console.log(page)}
         />);
         const root = component.root;
         const spans = root.findAllByType("span");
@@ -19,6 +20,7 @@ describe("Pagination component tests", () => {
             allItems={11}
             countItems={1}
             pozitionSize={10}
+            onCangedPage={(page)=> console.log(page)}
         />);
         const root = component.root;
         const buttons = root.findAllByType("button");
