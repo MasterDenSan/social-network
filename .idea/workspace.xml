@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="Commit Remove button">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utilits/Pagination/Pagination.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilits/Pagination/Pagination.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utilits/Pagination/Pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utilits/Pagination/Pagination.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="Commit Remove button" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -230,7 +226,7 @@
       <workItem from="1662288087271" duration="621000" />
       <workItem from="1662397023265" duration="457000" />
       <workItem from="1662487271930" duration="784000" />
-      <workItem from="1662569600000" duration="399000" />
+      <workItem from="1662569600000" duration="576000" />
     </task>
     <servers />
   </component>
