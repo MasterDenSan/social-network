@@ -1,11 +1,10 @@
 import React, {FC} from 'react';
 import styles from './../Dialogs.module.css';
+import {MassegeI} from "./types";
 
-export type MassegeT = {
-    massage: string
-}
 
-const Message: FC<MassegeT> = (props) => {
+
+const Message: FC<MassegeI> = (props) => {
     return (
     <div className={styles.chat__dialog}>{props.massage}</div>
     )
