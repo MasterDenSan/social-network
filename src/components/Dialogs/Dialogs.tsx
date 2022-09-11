@@ -5,27 +5,16 @@ import Message from "./Message/Message";
 import {Field, InjectedFormProps, reduxForm} from "redux-form";
 import {maxLengthCreator, minLengthCreator, required} from "../../Utilits/Validators";
 import {TextArea} from "../ItemsControl/FormControl/FormControls";
+import {DialogsI} from "./types";
 
-export type DialogsT = {
-    dialogsPage: {
-        dialogs: {
-            id: number
-            name: string
-        }[],
-        masseges: {
-            massege: string
-        }[]
-    },
-    friends: any[],
-    addDialogMessageActionCreator: (messageBody: string) => void
-}
+
 
 //обьявляем валидаторы
 const maxLength50 = maxLengthCreator(50);
 const minLength8 = minLengthCreator(8)
 
 //создание презинтационной компаненты
-const Dialogs: FC<DialogsT> = (props) => {
+const Dialogs: FC<DialogsI> = (props) => {
 
     let dialogElements = [props.dialogsPage.dialogs.map(d => <DialogsItem id={d.id} name={d.name}/>),
         props.friends.map(d => <DialogsItem img={d.img}/>)]
