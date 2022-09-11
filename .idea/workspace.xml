@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="Commit Remove button">
-      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/Message/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/Message/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +233,8 @@
       <workItem from="1662487271930" duration="784000" />
       <workItem from="1662569600000" duration="576000" />
       <workItem from="1662656708622" duration="385000" />
-      <workItem from="1662754582699" duration="361000" />
+      <workItem from="1662754582699" duration="1817000" />
+      <workItem from="1662873525553" duration="1264000" />
     </task>
     <servers />
   </component>
