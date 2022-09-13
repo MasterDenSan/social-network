@@ -1,25 +1,10 @@
 import React, {FC} from "react";
 import style from "./FormControl.module.css";
 import {Field} from "redux-form";
-import {BaseFieldProps} from "redux-form/lib/Field";
+import {FormControlsI} from "./types";
 
 
-export interface FormControlsI {
-    children: React.ReactNode
-    meta: {
-        touched: any
-        error: string
-    }
-}
 
-export interface createrFieldI extends BaseFieldProps{
-    component: any
-    name: string
-    placeholder: string
-    validate: any
-    text: string
-    props: any
-}
 
 const FormControls:FC<FormControlsI> = ({children, meta: {touched, error}}) => {
     let hasError = touched && error
@@ -58,6 +43,7 @@ export const createrField = (
            {...props}></Field> {text}
 </div>
 
+export default FormControls
 
 
 
