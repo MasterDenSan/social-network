@@ -2,14 +2,11 @@ import React, {FC} from 'react';
 import styles from './Navigation.module.css';
 import {NavLink} from 'react-router-dom';
 import FriendsBar from "./FriendsBar/FriendsBar";
+import {NavigationI} from "./types";
 
-export type NavigationT = {
-    navigation: {
-        friends: any[]
-    }
-}
 
-const Navigation: FC<NavigationT> = (props) => {
+
+const Navigation: FC<NavigationI> = (props) => {
     return (
         <div>
             <nav className={styles.nav}>
