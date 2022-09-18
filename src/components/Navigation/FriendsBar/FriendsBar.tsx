@@ -1,16 +1,11 @@
 import React, {FC} from 'react';
 import FriendsBarItem from "../FriendsBarItem/FriendsBarItem";
 import styles from "./FriendsBar.module.css";
+import {FriendsBarI} from "./types";
 
-export type FriendT = {
-    img: any
-    name: string
-}
-export type FriendsBarT = {
-    friends: FriendT[]
-}
 
-const FriendsBar: FC<FriendsBarT> = (props) => {
+
+const FriendsBar: FC<FriendsBarI> = (props) => {
 
     let frendElement = props.friends.map(f => <FriendsBarItem img={f.img} name={f.name}/>)
     return (

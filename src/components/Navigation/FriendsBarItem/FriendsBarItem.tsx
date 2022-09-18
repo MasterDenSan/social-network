@@ -1,8 +1,8 @@
 import React, {FC} from "react";
 import styles from "./FriendsBarItem.module.css";
-import {FriendT} from "../FriendsBar/FriendsBar";
+import {FriendI} from "../FriendsBar";
 
-export interface FriendsBarItemT extends FriendT {}
+export interface FriendsBarItemT extends FriendI {}
 
 
 const FriendsBarItem: FC<FriendsBarItemT> = (props) => {
