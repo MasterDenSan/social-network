@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Navigation from './components/Navigation/Navigation';
-import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import {BrowserRouter, Redirect, Route, Switch, withRouter} from 'react-router-dom';
@@ -13,6 +12,7 @@ import {initializeApp} from "./redux/app-reduser";
 import Preloader from "./components/ItemsControl/Prealoader/Preloader";
 import store from "./redux/redux-store";
 import {WithSuspense} from "./HOC/withSuspense";
+import News from "./components/News";
 
 const DialogsContainer = React.lazy(() => import("./components/Dialogs/DialogsContainer"));
 const UsersContainer = React.lazy(() => import("./components/Users/UsersContainer"));

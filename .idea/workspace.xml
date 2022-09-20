@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="Commit Remove button">
-      <change afterPath="$PROJECT_DIR$/src/components/Navigation/FriendsBarItem/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -240,7 +239,8 @@
       <workItem from="1663312614199" duration="265000" />
       <workItem from="1663403597262" duration="345000" />
       <workItem from="1663479731381" duration="458000" />
-      <workItem from="1663589857782" duration="566000" />
+      <workItem from="1663589857782" duration="1220000" />
+      <workItem from="1663679146436" duration="307000" />
     </task>
     <servers />
   </component>
