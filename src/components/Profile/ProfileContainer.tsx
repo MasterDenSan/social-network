@@ -1,5 +1,4 @@
 import React from 'react';
-import Profile from "./Profile";
 import {connect} from "react-redux";
 import {
     getUserProfile,
@@ -12,17 +11,13 @@ import {
 import {withRouter} from "react-router-dom";
 import {withAuthRedirect} from "../../HOC/withAuthRedirect";
 import {compose} from "redux";
-import {ProfileInfoT} from "./ProfileInformation/ProfileInfo";
 import {RootState} from "../../redux/redux-store";
+import {ProfileContainerI} from "./types";
+import Profile from "./Profile";
 
-export interface ProfileContainerT extends ProfileInfoT {
-    match: any
-    meUserId: number
-    getUserProfile: (userId: number) => void
-    getUserStatus: (userId: number) => void
-}
 
-class ProfileContainer extends React.Component<ProfileContainerT> {
+
+class ProfileContainer extends React.Component<ProfileContainerI> {
     refreshProfile() {
         let userId = this.props.match.params.userId;
         if (!userId) {
@@ -36,7 +31,7 @@ class ProfileContainer extends React.Component<ProfileContainerT> {
         this.refreshProfile();
     }
 
-    componentDidUpdate(prevProps: ProfileContainerT, prevState: RootState) {
+    componentDidUpdate(prevProps: ProfileContainerI, prevState: RootState) {
         if (this.props.match.params.userId !== prevProps.match.params.userId) {
             this.refreshProfile();
         }
