@@ -2,14 +2,9 @@ import style from './Pagination.module.css';
 import React, {FC, useState} from 'react';
 // @ts-ignore
 import cn from 'classnames';
+import {PaginationI} from "./types";
 
-export interface PaginationI {
-    allItems: number
-    countItems: number
-    currentPage?: number
-    onCangedPage: (page: number) => void
-    pozitionSize?: number
-}
+
 
 export const Pagination: FC<PaginationI> = ({allItems, countItems, currentPage, onCangedPage, pozitionSize = 10}) => {
     let numberOfPages = Math.ceil(allItems / countItems);
