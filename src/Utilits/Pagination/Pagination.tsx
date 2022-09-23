@@ -4,9 +4,6 @@ import React, {FC, useState} from 'react';
 import cn from 'classnames';
 import {PaginationI} from "./types";
 
-
-
-
 export const Pagination: FC<PaginationI> = ({allItems, countItems, currentPage, onCangedPage, pozitionSize = 10}) => {
     let numberOfPages = Math.ceil(allItems / countItems);
     let pages = [];
