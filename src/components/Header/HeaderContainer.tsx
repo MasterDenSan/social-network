@@ -4,7 +4,6 @@ import {connect} from "react-redux";
 import {logout} from "../../redux/auth-reduser";
 import {RootState} from "../../redux/redux-store";
 
-
 class HeaderContainer extends React.Component {
     render() {
         return <Header {...this.props}/>
