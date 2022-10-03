@@ -5,7 +5,6 @@ import {
 } from "../../redux/users-reducer";
 import {connect} from "react-redux";
 import React from "react";
-import Users from "./Users";
 import Preloader from "../ItemsControl/Prealoader/Preloader";
 import {withAuthRedirect} from "../../HOC/withAuthRedirect";
 import {compose} from "redux";
@@ -18,22 +17,8 @@ import {
     getUsers
 } from "../../redux/users-selectors";
 import {RootState} from "../../redux/redux-store";
-import {onlyUser} from "./User";
-
-
-export interface IUsersComponentAPI {
-    requestUsers:(currentPage: number, countItems: number) => void
-    currentPage: number
-    countItems: number
-    setCurrentPage: (page: number) => void
-    isProgresing: boolean
-    allItems: number
-    users: onlyUser[]
-    follow: (id: number) => void
-    unfollow: (id: number) => void
-    isProcessingArr: []
-    pozitionSize: number
-}
+import {IUsersComponentAPI} from "./types";
+import Users from "./Users";
 
 class UsersComponentAPI extends React.Component<IUsersComponentAPI> {
 
