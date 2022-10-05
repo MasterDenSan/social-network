@@ -19,13 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd2fbfa8-5077-4f07-928a-62fcbf20231e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Users/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Users/types.ts" afterDir="false" />
+    <list default="true" id="dd2fbfa8-5077-4f07-928a-62fcbf20231e" name="Changes" comment="Commit Remove button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/User.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +103,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="" />
+      <changelist id="dd2fbfa8-5077-4f07-928a-62fcbf20231e" name="Changes" comment="" />
       <created>1582231231656</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -254,6 +249,7 @@
       <workItem from="1664345338647" duration="333000" />
       <workItem from="1664464136701" duration="199000" />
       <workItem from="1664622386760" duration="684000" />
+      <workItem from="1664819992893" duration="725000" />
     </task>
     <servers />
   </component>
