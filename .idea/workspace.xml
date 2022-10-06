@@ -20,7 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd2fbfa8-5077-4f07-928a-62fcbf20231e" name="Changes" comment="Commit Remove button">
+      <change afterPath="$PROJECT_DIR$/src/HOC/withAuthRedirect/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HOC/withAuthRedirect/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HOC/withAuthRedirect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/HOC/withAuthRedirect/withAuthRedirect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,6 +256,8 @@
       <workItem from="1664464136701" duration="199000" />
       <workItem from="1664622386760" duration="684000" />
       <workItem from="1664819992893" duration="725000" />
+      <workItem from="1664974574708" duration="575000" />
+      <workItem from="1665031471491" duration="368000" />
     </task>
     <servers />
   </component>

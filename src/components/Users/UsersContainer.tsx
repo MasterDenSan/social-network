@@ -6,7 +6,6 @@ import {
 import {connect} from "react-redux";
 import React from "react";
 import Preloader from "../ItemsControl/Prealoader/Preloader";
-import {withAuthRedirect} from "../../HOC/withAuthRedirect";
 import {compose} from "redux";
 import {
     getAllItems,
@@ -19,6 +18,7 @@ import {
 import {RootState} from "../../redux/redux-store";
 import {IUsersComponentAPI} from "./types";
 import Users from "./Users";
+import {withAuthRedirect} from "../../HOC/withAuthRedirect";
 
 class UsersComponentAPI extends React.Component<IUsersComponentAPI> {
 
