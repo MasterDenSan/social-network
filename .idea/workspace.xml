@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd2fbfa8-5077-4f07-928a-62fcbf20231e" name="Changes" comment="Commit Remove button">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="dd2fbfa8-5077-4f07-928a-62fcbf20231e" name="Changes" comment="Commit Remove button" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,11 +72,11 @@
       <recent name="E:\project\new-project1\first-project\src\components\Dialogs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projectsHome\social-network\src\HOC\withSuspense" />
       <recent name="C:\projectsHome\social-network\src\HOC\withAuthRedirect" />
       <recent name="E:\project\new-project1\first-project\src\components" />
       <recent name="E:\project\new-project1\first-project\src" />
       <recent name="E:\project\new-project1\first-project\src\components\Users" />
-      <recent name="E:\project\new-project1\first-project\src\components\Navigation" />
     </key>
   </component>
   <component name="RunManager">
@@ -253,6 +251,7 @@
       <workItem from="1664819992893" duration="725000" />
       <workItem from="1664974574708" duration="575000" />
       <workItem from="1665031471491" duration="1072000" />
+      <workItem from="1665138908515" duration="756000" />
     </task>
     <servers />
   </component>
