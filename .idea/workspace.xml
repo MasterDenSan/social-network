@@ -57,7 +57,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/projectsCRT/region-lk-react",
+    "last_opened_file_path": "C:/projectsHome/social-network",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
@@ -262,6 +262,7 @@
       <workItem from="1665842793940" duration="613000" />
       <workItem from="1665941834582" duration="628000" />
       <workItem from="1665988372846" duration="32000" />
+      <workItem from="1666014724294" duration="558000" />
     </task>
     <servers />
   </component>
