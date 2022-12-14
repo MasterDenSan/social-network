@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd2fbfa8-5077-4f07-928a-62fcbf20231e" name="Changes" comment="Commit Remove button" />
+    <list default="true" id="dd2fbfa8-5077-4f07-928a-62fcbf20231e" name="Changes" comment="Commit Remove button">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +57,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/projectsHome/social-network&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projectsCRT/region-lk-react&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
@@ -295,6 +297,9 @@
       <workItem from="1670214486171" duration="67000" />
       <workItem from="1670276847700" duration="233000" />
       <workItem from="1670525334123" duration="612000" />
+      <workItem from="1670788155473" duration="658000" />
+      <workItem from="1670919747478" duration="4000" />
+      <workItem from="1670919762560" duration="174000" />
     </task>
     <servers />
   </component>
