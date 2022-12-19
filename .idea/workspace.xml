@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="Commit Remove button">
+    <list default="true" id="dd2fbfa8-5077-4f07-928a-62fcbf20231e" name="Changes" comment="Commit Remove button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,22 +52,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
-    <property name="ts.external.directory.path" value="C:\myPersonalRepositories\social-network\node_modules\typescript\lib" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projectsHome/social-network&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\projectsHome\\social-network\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\project\new-project1\first-project\src\components\redux" />
@@ -77,10 +74,11 @@
       <recent name="E:\project\new-project1\first-project\src\components\Dialogs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projectsHome\social-network\src\HOC\withSuspense" />
+      <recent name="C:\projectsHome\social-network\src\HOC\withAuthRedirect" />
       <recent name="E:\project\new-project1\first-project\src\components" />
       <recent name="E:\project\new-project1\first-project\src" />
       <recent name="E:\project\new-project1\first-project\src\components\Users" />
-      <recent name="E:\project\new-project1\first-project\src\components\Navigation" />
     </key>
   </component>
   <component name="RunManager">
@@ -106,7 +104,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="14d362bc-2633-4f64-b7d3-a79b7bb79071" name="Default Changelist" comment="" />
+      <changelist id="dd2fbfa8-5077-4f07-928a-62fcbf20231e" name="Changes" comment="" />
       <created>1582231231656</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -252,8 +250,58 @@
       <workItem from="1664345338647" duration="333000" />
       <workItem from="1664464136701" duration="199000" />
       <workItem from="1664622386760" duration="684000" />
-      <workItem from="1664783058820" duration="294000" />
-      <workItem from="1664818187269" duration="369000" />
+      <workItem from="1664819992893" duration="725000" />
+      <workItem from="1664974574708" duration="575000" />
+      <workItem from="1665031471491" duration="1072000" />
+      <workItem from="1665138908515" duration="756000" />
+      <workItem from="1665244969901" duration="1308000" />
+      <workItem from="1665315862211" duration="143000" />
+      <workItem from="1665496439927" duration="1294000" />
+      <workItem from="1665549958249" duration="216000" />
+      <workItem from="1665755296229" duration="655000" />
+      <workItem from="1665842793940" duration="613000" />
+      <workItem from="1665941834582" duration="628000" />
+      <workItem from="1665988372846" duration="32000" />
+      <workItem from="1666014724294" duration="558000" />
+      <workItem from="1666098858566" duration="189000" />
+      <workItem from="1666203417351" duration="895000" />
+      <workItem from="1666454091340" duration="620000" />
+      <workItem from="1666537024540" duration="217000" />
+      <workItem from="1666631852820" duration="619000" />
+      <workItem from="1666680813001" duration="658000" />
+      <workItem from="1666793313219" duration="127000" />
+      <workItem from="1666893591458" duration="853000" />
+      <workItem from="1666944035987" duration="1261000" />
+      <workItem from="1667029560533" duration="610000" />
+      <workItem from="1667140313445" duration="618000" />
+      <workItem from="1667211674344" duration="601000" />
+      <workItem from="1667318406220" duration="313000" />
+      <workItem from="1667461205640" duration="581000" />
+      <workItem from="1667559985915" duration="173000" />
+      <workItem from="1667670796499" duration="613000" />
+      <workItem from="1667720879207" duration="293000" />
+      <workItem from="1667826141007" duration="1321000" />
+      <workItem from="1668013506541" duration="644000" />
+      <workItem from="1668099641878" duration="930000" />
+      <workItem from="1668249938155" duration="763000" />
+      <workItem from="1668444832622" duration="612000" />
+      <workItem from="1668601333521" duration="353000" />
+      <workItem from="1668704938835" duration="26000" />
+      <workItem from="1668866925577" duration="602000" />
+      <workItem from="1669050068508" duration="2041000" />
+      <workItem from="1669307469423" duration="154000" />
+      <workItem from="1669463226336" duration="766000" />
+      <workItem from="1669655014339" duration="2038000" />
+      <workItem from="1669796793742" duration="2407000" />
+      <workItem from="1670168607830" duration="1581000" />
+      <workItem from="1670214486171" duration="67000" />
+      <workItem from="1670276847700" duration="233000" />
+      <workItem from="1670525334123" duration="612000" />
+      <workItem from="1670788155473" duration="658000" />
+      <workItem from="1670919747478" duration="4000" />
+      <workItem from="1670919762560" duration="174000" />
+      <workItem from="1670958481920" duration="1233000" />
+      <workItem from="1671218478860" duration="441000" />
     </task>
     <servers />
   </component>
