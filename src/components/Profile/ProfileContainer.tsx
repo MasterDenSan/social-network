@@ -9,11 +9,11 @@ import {
     updateUserStatus
 } from "../../redux/profile-reducer";
 import {withRouter} from "react-router-dom";
+import {withAuthRedirect} from "../../HOC/withAuthRedirect";
 import {compose} from "redux";
 import {RootState} from "../../redux/redux-store";
 import {ProfileContainerI} from "./types";
 import Profile from "./Profile";
-import {withAuthRedirect} from "../../HOC/withAuthRedirect";
 
 
 

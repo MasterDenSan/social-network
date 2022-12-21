@@ -2,7 +2,24 @@ import React, {FC} from "react";
 import style from "./User.module.css";
 import userPhoto from "../assets/images/userPhoto.png";
 import {NavLink} from "react-router-dom";
-import {UserType} from "./types";
+
+
+
+
+export type UserType = {
+    user?: any
+    follow: (id: number) => void
+    unfollow: (id: number) => void
+    isProcessingArr: []
+}
+
+export type onlyUser = {
+    id: number
+    photos: any
+    name: string
+    status: string
+    followed: boolean
+}
 
 const User: FC<UserType> = ({user, follow, unfollow, isProcessingArr}) => {
 
