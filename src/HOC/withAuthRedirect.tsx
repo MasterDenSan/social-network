@@ -12,7 +12,6 @@ let mapStateToPropsContainer = (state:RootState) => ({
     isAuth: state.auth.isAuth
 })
 
-
 export const withAuthRedirect = (Component: FC<AuthRedirectT>) => {
 
     class AuthRedirect extends React.Component<AuthRedirectT> {
