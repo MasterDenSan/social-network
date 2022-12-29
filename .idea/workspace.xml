@@ -61,11 +61,11 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/projectsHome/social-network&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/myPersonalRepositories/social-network&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\projectsHome\\social-network\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\myPersonalRepositories\\social-network\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -108,7 +108,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dd2fbfa8-5077-4f07-928a-62fcbf20231e" name="Changes" comment="" />
+      <changelist id="8e1b5923-5b06-46e4-8b86-01797476e017" name="Changes" comment="" />
       <created>1582231231656</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -306,7 +306,12 @@
       <workItem from="1670919762560" duration="174000" />
       <workItem from="1670958481920" duration="1233000" />
       <workItem from="1671218478860" duration="441000" />
+<<<<<<< HEAD
+      <workItem from="1671570965890" duration="676000" />
+      <workItem from="1671889636812" duration="2059000" />
+=======
       <workItem from="1671384383604" duration="799000" />
+>>>>>>> a5b0e4d241f3c09480a3edd384e58686f6f90a59
     </task>
     <servers />
   </component>
